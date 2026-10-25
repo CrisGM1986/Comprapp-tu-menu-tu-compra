@@ -1,3 +1,56 @@
+COMPRAPP v4 — Catálogo incremental, períodos y navegación móvil
+
+NOVEDADES DEL CATÁLOGO
+- 32 platos oficiales (incluidas las 8 nuevas recetas del repositorio) y
+  4 propuestas de acompañamientos/postres. Fotos en assets/FOTOS/.
+- IndexedDB es el almacenamiento real; no se usa localStorage.clear().
+- Cada apertura compara el catálogo publicado por ID y añade solo lo nuevo.
+- Las recetas personales y los campos editados por el usuario se conservan.
+  Los campos oficiales sin editar reciben las mejoras publicadas.
+- Las eliminaciones voluntarias de recetas oficiales quedan registradas.
+- Antes de una migración, se guarda la copia previa en la misma transacción
+  que la actualización. Se comprueba la escritura y se cancela ante errores.
+- Ajustes permite descargar esa copia previa en JSON. Solo se mantiene la
+  más reciente; la exportación manual permite conservar más copias.
+- Las copias incluyen catálogo, historial de revisiones y eliminaciones.
+- Para las instalaciones antiguas se usa el catálogo original como base:
+  una receta original ausente se considera eliminada voluntariamente.
+- Las listas, los menús, ajustes y fotos personales no se reinician.
+
+PUBLICACIÓN Y CACHÉ
+La web actual está en GitHub Pages:
+https://crisgm1986.github.io/Comprapp-tu-menu-tu-compra/
+Esta entrega solo actualiza archivos locales. Debes publicar los cambios
+para que lleguen al teléfono. Tras publicar, abre la web con conexión,
+espera unos segundos a que se descargue la nueva versión y vuelve a abrirla.
+Comprueba en Ajustes que aparece Comprapp v4. No borres los datos del sitio.
+El nuevo service worker activa la nueva caché sin esperar a cerrar todas
+las pestañas. El documento abierto termina su sesión con el código que ya
+cargó; al recargar recibe los nuevos archivos.
+recipes.js se comprueba en la red en cada carga, con la copia local como
+respaldo sin conexión. Así las futuras recetas llegan sin cambiar sw.js.
+Al cambiar el código de la app, sigue cambiando la versión CACHE de sw.js.
+Los datos no se trasladan automáticamente entre GitHub Pages y Cloudflare:
+exporta/importa JSON si cambias de origen o navegador.
+
+COMPRAPP v4 — Períodos y navegación móvil
+
+Novedades:
+- Ajustes > Duración: una semana, dos semanas o mensual (4 semanas).
+  Son 5, 10 o 20 días lectivos, siempre de lunes a viernes.
+- Ampliar conserva los platos existentes y genera los días nuevos.
+  Reducir retira los días fuera del período; exporta antes si quieres
+  conservar el período completo. La compra y las estadísticas se recalculan.
+- Las copias nuevas usan formato versión 3 y admiten períodos variables.
+  Se siguen importando las copias anteriores (dos semanas por defecto).
+- La navegación móvil está fuera de la cabecera y se fija a la pantalla.
+  Se amplía la detección a pantallas táctiles de hasta 1100 píxeles CSS.
+- Ajustes muestra Comprapp v4 y el tipo de vista. Incluye un botón para
+  comprobar actualizaciones. La nueva caché se activa cuando termina su
+  descarga; recargar después permite ver los archivos nuevos.
+- Este cambio no publica el repositorio. Para actualizar la web del teléfono
+  sigue siendo necesario enviar los archivos a GitHub Pages (la web actual) o el alojamiento que utilices.
+
 COMPRAPP · Tu menú, tu compra — versión 3
 
 NOVEDADES DE LA VERSIÓN 3

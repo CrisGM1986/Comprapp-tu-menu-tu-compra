@@ -1,3 +1,38 @@
+CATÁLOGO INCREMENTAL — Pruebas adicionales superadas
+- Catálogo de 32 recetas más 4 acompañamientos/postres.
+- Migración de copia antigua con recetas personales, foto editada, receta
+  eliminada y casillas de compra marcadas: preservación comprobada.
+- Cambios oficiales por campo: se conserva el nombre editado y se actualizan
+  tiempo/foto no modificados por el usuario.
+- Nueva receta futura añadida una sola vez, historial sin duplicados.
+- Copia previa descargable y exportación/importación de metadatos.
+- Fotos nuevas cargadas desde sus rutas reales, también sin conexión.
+- Instalación real de caché v3 sobre servidor local, publicación simulada de
+  v4, activación de la nueva caché y recarga sin borrar datos.
+- Publicación posterior de recipes.js sin cambiar sw.js: la receta nueva
+  aparece al recargar y no se duplica en cargas posteriores.
+- Se comprobó por HTTP la web pública de GitHub Pages: aún servía sw.js v3.
+  No se ha actualizado esa web ni probado físicamente el teléfono.
+
+COMPRAPP v4 — Verificación local
+
+Superado en Edge mediante Playwright:
+- 1/2/4 semanas: 10/20/40 servicios de comida y cena.
+- Conservación de platos existentes al cambiar la duración.
+- Recarga, exportación validada y compatibilidad con copia versión 2.
+- Período de cuatro semanas que cruza diciembre y enero.
+- Barra móvil fuera de la cabecera, fija y visible tras desplazamiento
+  y cambio de altura de ventana; modo táctil a 393 y 980 píxeles.
+- Navegación de escritorio permanece en la cabecera.
+- Versión/vista visibles en Ajustes y recarga sin conexión.
+- Sin errores JavaScript durante la prueba.
+
+No se ha comprobado el teléfono físico ni su web publicada. La captura
+aportada muestra la barra; no se ha confirmado la causa de su ausencia
+sobre el teléfono. Los cambios refuerzan adaptación y actualización.
+
+Registro anterior:
+
 COMPRAPP v3 — Verificación de la interfaz
 
 Pruebas superadas en Edge local mediante Playwright:

@@ -1,0 +1,33 @@
+AMPLIAR EL RECETARIO DE COMPRAPP
+
+1. Añade una fila a SEED_RAW en recipes.js. Sus nueve campos son:
+   nombre, grupo, minutos, emoji, ingredientes, pasos, captura, foto, ID.
+   Usa un ID nuevo y permanente, por ejemplo r32. Los IDs actuales r0 a r31
+   están fijados. No cambies IDs al ordenar recetas y no reutilices uno borrado.
+2. Para fotos, usa una ruta real y respeta mayúsculas/minúsculas:
+   assets/FOTOS/mi-receta.jpg. Añade también el archivo al repositorio.
+3. Conserva catalog-baseline.js: representa el catálogo original y permite
+   distinguir las ediciones y eliminaciones de las instalaciones antiguas.
+   No lo actualices con nuevas recetas.
+4. Publica recipes.js y las fotos junto con tus cambios de Git.
+   La próxima carga online comprobará el catálogo y añadirá solo los IDs nuevos.
+   No necesitas incrementar un contador de recetas: se calcula una revisión
+   del contenido y se registra una sola vez por publicación distinta.
+5. Para corregir ingredientes, pasos o foto de una receta oficial, edita su
+   fila manteniendo el mismo ID. Los campos sin modificar por el usuario se
+   actualizan; sus campos personalizados se conservan. La lista completa de
+   ingredientes se considera un único campo para evitar mezclas incoherentes.
+6. Una receta eliminada por el usuario no reaparece. Las personales no se
+   sustituyen. Quitar una receta del catálogo publicado tampoco borra su
+   ejemplar guardado por el usuario.
+7. Las recetas se guardan en IndexedDB, base comprapp, almacén data:
+   state = datos actuales; preMigration = copia previa de recuperación.
+   No cambies el nombre de esa base ni elimines sus almacenes.
+8. Las fotos nuevas visitadas quedan disponibles sin conexión. Si deseas que
+   todas se descarguen antes de visitarlas, añádelas a FILES en sw.js y cambia
+   CACHE. Esta entrega ya precarga las nueve fotos locales existentes.
+
+La migración y copia de recuperación son una transacción: ambas se guardan
+o ninguna. En Ajustes puedes descargar la copia previa a la última migración
+o importación. Al importarla se vuelve a reconciliar con el catálogo publicado.
+Las exportaciones manuales son recomendables antes de cambios de dominio.
