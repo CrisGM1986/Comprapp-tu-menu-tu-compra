@@ -1,3 +1,25 @@
+COMPRAPP v3 — Verificación de la interfaz
+
+Pruebas superadas en Edge local mediante Playwright:
+- Dos tablas semanales con cinco celdas de día por fila.
+- Filas de primero, segundo y postre con igual posición y altura en cada día.
+- Móvil: un día activo, dos tarjetas (comida/cena), seis platos en formato
+  completo y barra de diez días con desplazamiento horizontal.
+- Navegación inferior fija y controles táctiles de 44 x 44 px o mayores.
+- Cambio de día con clic y teclas flecha, Inicio y Fin.
+- Selector manual en diálogo y aviso previo de repetición semanal.
+- Apertura de receta y regeneración aislada sin cambiar los demás platos.
+- Sin desbordamiento horizontal a 320, 375, 760, 768, 1024 y 1440 px.
+- Navegación por las cuatro pantallas en formato móvil.
+- Estilos de impresión: dos semanas completas, no solo el día activo.
+- Exportación/importación JSON y recarga sin conexión.
+- Inspección visual de escritorio y móvil. Sin errores JavaScript.
+
+No se ha probado sobre un móvil físico ni publicado en Cloudflare.
+Se mantienen los datos y las funciones de planificación de la versión 2.
+
+REGISTRO ANTERIOR:
+
 COMPRAPP v2 — Verificación local, 25 de octubre de 2026
 
 Pruebas de la versión 2 superadas en Edge automatizado:

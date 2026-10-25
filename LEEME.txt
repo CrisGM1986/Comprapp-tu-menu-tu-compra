@@ -1,4 +1,22 @@
-COMPRAPP · Tu menú, tu compra — versión 2
+COMPRAPP · Tu menú, tu compra — versión 3
+
+NOVEDADES DE LA VERSIÓN 3
+- Ordenador: tabla semanal con primera columna de etiquetas y filas de
+  comida/cena alineadas entre los cinco días. Las cabeceras no se repiten
+  dentro de cada plato.
+- Móvil (hasta 760 px): navegación inferior fija con iconos; selector de
+  fechas y comensales en una línea; botón Generar menú a todo el ancho.
+- Barra horizontal de días para elegir cualquiera de los diez días lectivos.
+  Se muestran solo comida y cena del día activo, con platos apilados.
+- Miniaturas circulares y título/tiempo a su derecha. Botones: ojo para ver,
+  flechas para otra similar y tres puntos para elegir manualmente.
+- La selección manual muestra el aviso de repetición antes de guardar.
+- Botones móviles de al menos 44 x 44 px; barra de días utilizable también
+  con flechas del teclado, Inicio y Fin.
+- Tarjetas blancas, fondo de trabajo gris muy claro y acciones verde lima.
+- Imprimir conserva las dos semanas completas desde cualquier pantalla.
+- No cambia el formato de datos: sigue leyendo y exportando copias versión 2
+  e importando versión 1. No se borran datos por esta actualización visual.
 
 PARA EMPEZAR
 1. Descomprime el ZIP. No abras la aplicación dentro del ZIP.
@@ -112,7 +130,7 @@ Referencia: https://developers.cloudflare.com/workers/static-assets/binding/
 ARCHIVOS
 index.html, styles.css: interfaz y diseño adaptable.
 recipes.js: catálogo inicial y referencias de las capturas.
-app.js y features.js: planificación, edición, compra, IndexedDB, migración y copias.
+app.js, features.js y menu-layout.js: planificación, edición, compra, IndexedDB, migración y copias.
 sw.js, manifest.webmanifest, assets/icon.svg: funcionamiento web sin conexión.
 assets/captura-*.png: imágenes originales de referencia.
 VERIFICACION.txt: alcance real de las pruebas locales.
