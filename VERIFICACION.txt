@@ -1,0 +1,64 @@
+COMPRAPP v2 — Verificación local, 25 de octubre de 2026
+
+Pruebas de la versión 2 superadas en Edge automatizado:
+- Fondo blanco y botones verde lima (colores comprobados).
+- Formatos independientes de comida y cena: primero/segundo/postre y
+  primero/acompañamiento en un mismo menú.
+- Ocultar y volver a mostrar conserva las selecciones; la compra solo
+  incluye los platos visibles. Generación completa con el formato elegido.
+- Miniaturas de fotos e iconos en el menú.
+- Aviso de receta repetida en la misma semana.
+- Sustitución individual por otra del mismo grupo sin cambiar otros platos.
+- Ausencia de alternativas: aviso sin modificar la receta.
+- Veinte sustituciones respetando exclusiones.
+- Edición de toque especial, guardado y recuperación tras recargar.
+- Alta de acompañamiento propio y cálculo de sus ingredientes.
+- Exportación/importación versión 2 conservando los nuevos campos.
+- Importación de copia versión 1 conservando receta editada y foto.
+- Migración de datos versión 1 guardados directamente en IndexedDB:
+  conserva platos del menú, cantidades y casillas marcadas.
+- Cuatro pantallas a 375 px sin desbordamiento horizontal.
+- Recarga y menú sin conexión con la nueva caché.
+- Inspección visual de menú de escritorio, móvil y ajustes.
+- Sin errores JavaScript en el recorrido probado.
+
+Se conservan las limitaciones anteriores: sin despliegue real ni pruebas
+sobre móvil físico; estadísticas por grupo principal, no nutricionales.
+
+REGISTRO DE LA VERSIÓN ANTERIOR (pruebas originales, no todas repetidas):
+
+COMPRAPP v1 — Verificación local, 25 de octubre de 2026
+
+Entorno: Microsoft Edge en Windows, automatizado con Playwright.
+Aplicación servida por HTTP local; adicionalmente apertura directa file://.
+
+PRUEBAS SUPERADAS
+- Carga inicial de 24 recetas y 20 huecos, únicamente de lunes a viernes.
+- Edición de una receta y subida de imagen; persistencia tras recargar.
+- Alta y eliminación de receta propia sin uso en el calendario.
+- Cambio de comensales de 4 a 8: todas las cantidades se duplican.
+- Exportación JSON con fotos y posterior importación recuperando ajustes.
+- Rechazo de versión de copia incompatible sin alterar datos guardados.
+- Rechazo de referencia de receta inexistente, acompañamiento inválido,
+  foto no permitida, cantidad negativa, captura inválida y hueco duplicado.
+- Cambio de plato y acompañamiento desde el calendario.
+- Casilla de compra persistente tras recargar la página.
+- Suma exacta de 800 + 800 g de patata = 1600 g.
+- Normalización de nombre con tilde y conversión de 1 kg + 500 g = 1500 g.
+- Treinta generaciones con exclusiones, sin recetas incompatibles.
+- Exclusiones también respetadas en los acompañamientos automáticos.
+- Gestión de catálogo sin recetas compatibles con las preferencias.
+- Cuatro vistas a 375 px de ancho sin desbordamiento horizontal.
+- Recarga sin red después de activar el service worker y acceso al recetario.
+- Apertura directa de index.html en Edge y recarga con calendario persistente.
+- Sin errores JavaScript en el recorrido principal probado.
+- Inspección visual de calendario de escritorio, móvil y recetario.
+
+LÍMITES DE LA VERIFICACIÓN
+No se ha desplegado a GitHub ni Cloudflare, ni probado en móvil físico,
+Safari, Firefox, iOS, App Store o múltiples pestañas editando a la vez.
+La vista móvil corresponde a un navegador con ventana de 375 px.
+No se han cocinado las recetas ni calculado su composición nutricional.
+Las fotos proceden de capturas de baja resolución y pueden verse pixeladas.
+El almacenamiento puede ser borrado por el usuario o navegador; la copia
+JSON es el mecanismo de respaldo y traslado entre dispositivos.

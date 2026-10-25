@@ -1,0 +1,121 @@
+COMPRAPP · Tu menú, tu compra — versión 2
+
+PARA EMPEZAR
+1. Descomprime el ZIP. No abras la aplicación dentro del ZIP.
+2. Abre index.html en Edge o Chrome. Para el modo sin conexión de una web
+   publicada y una dirección estable, usa un servidor local o Cloudflare HTTPS.
+3. Revisa el menú inicial, cambia platos y consulta «Mi compra».
+4. En Ajustes, exporta periódicamente una copia JSON.
+
+QUÉ INCLUYE
+- HTML/CSS/JS sin compilación, bibliotecas externas, cuentas ni claves.
+- Dos semanas naturales: lunes a viernes, comida y cena (20 huecos).
+- Cuatro comensales inicialmente; configurable de 1 a 30.
+- 24 recetas originales y 4 propuestas de acompañamientos y postres. Se pueden crear y eliminar recetas.
+- Fotos propias JPG, PNG o WebP, comprimidas y guardadas localmente.
+- Tres capturas originales y las seis fotos que aparecen en ellas.
+- Generación por grupos, preferencia por ingredientes compartidos, límite
+  de tiempo y exclusiones de ingredientes por coincidencia textual.
+- Acompañamientos editables, incluidos en la lista de compra.
+- Compra agrupada; suma por nombre normalizado y unidad. Convierte kg a g
+  y litros a ml. No convierte unidades de piezas a gramos ni estima precios.
+- Impresión del menú y compra; descarga de la compra en texto.
+- IndexedDB y copia JSON completa con fotos, ajustes y marcas de compra.
+- Caché sin conexión después de la primera visita por HTTP local o HTTPS.
+
+CONTENIDO DE LAS RECETAS
+Los nombres de siete platos proceden de las capturas y los otros 17 del
+listado. Las capturas no contienen elaboraciones completas: las cantidades,
+rellenos y pasos son propuestas caseras, no transcripciones de las fotos
+ni recetas oficiales de Thermomix. El bagel propuesto es de queso, tomate
+y huevo; los calabacines se proponen rellenos de garbanzos. Puedes cambiarlos.
+Los tiempos son aproximados y dependen del equipo y tamaño de las piezas.
+Se conservan las capturas originales en assets/.
+
+CÓMO GENERA EL MENÚ
+Cada semana intenta incluir una comida de legumbres, tres de pescado,
+dos de verduras, dos de huevos, una de pasta y una de carne.
+Favorece no repetir platos, cenas más rápidas e ingredientes comunes en la
+semana. Si faltan recetas de un grupo, recurre a otras compatibles.
+El recetario inicial tiene un solo guiso de legumbres y una receta en Pasta:
+esos platos pueden repetirse entre semanas. Añadir recetas aumenta variedad.
+Es una planificación orientativa por categorías, no un análisis nutricional
+ni un menú personalizado para necesidades médicas. Las exclusiones no son
+un filtro de alérgenos certificado. No hay inventario de despensa: puedes
+marcar manualmente en la compra lo que ya tienes.
+
+NOVEDADES DE LA VERSIÓN 2
+- Botones verde lima y fondo blanco.
+- Ajustes independientes para Comida y Cena: primer plato siempre visible,
+  segundo, acompañamiento y postre opcionales.
+- Al activar una sección vacía se propone un plato compatible si existe.
+  Si no existe ninguno, queda visible para elegirlo tras añadir recetas.
+- Al ocultar una sección se conservan sus selecciones, pero sus ingredientes
+  no se incluyen en la compra y sus platos no cuentan en las estadísticas.
+- En cada receta, selecciona los usos permitidos: primero, segundo,
+  acompañamiento o postre. Puedes asignar más de un uso.
+- Acompañamientos: son recetas con cantidades, foto y elaboración propias.
+  En la receta principal puedes marcar acompañamientos sugeridos.
+  Solo el acompañamiento seleccionado en el calendario entra en la compra.
+- Toque especial: texto editable para trucos y acabados. Si añades un nuevo
+  ingrediente, inclúyelo también en Ingredientes para sumarlo a la compra.
+- Miniaturas de fotos en el menú; iconos si todavía no hay foto.
+- Otra similar: cambia solo ese plato por otro aleatorio del mismo grupo y
+  con el mismo uso. Respeta tiempo y exclusiones y prioriza no repetir en la
+  semana. Si no hay alternativa, avisa y conserva el plato actual.
+- Aviso de receta repetida esta semana: cuenta cualquier uso visible de esa
+  receta de lunes a viernes, incluidos acompañamientos y postres. No bloquea
+  la elección manual ni considera repetición el uso en otra semana.
+- Gráficas: en el menú cuentan las apariciones de platos visibles; en el
+  recetario cuentan las recetas distintas. Cada receta tiene un grupo
+  principal. No se calculan nutrientes ni proporciones por ingrediente.
+- Los 24 platos anteriores conservan por defecto uso de primero y segundo.
+  Revisa esta selección para adaptarla a las costumbres de tu familia.
+
+GUARDADO Y ACTUALIZACIONES
+La versión 2 migra automáticamente los datos guardados de la versión 1.
+También importa las copias JSON de la versión 1 y exporta copias versión 2.
+Conserva el ZIP anterior, pero no uses la versión 1 sobre datos ya migrados.
+Cada dispositivo/navegador tiene sus datos. No se suben a un servidor y no
+se comparten automáticamente con familiares. Para transferirlos, exporta
+en un dispositivo e importa en el otro. Importar REEMPLAZA los datos tras
+confirmarlo; exporta antes para conservar una copia.
+La actualización de archivos no borra IndexedDB si mantienes la misma
+dirección/origen y perfil del navegador. Cambiar de dominio, puerto o perfil
+crea otro almacenamiento. El modo privado y la limpieza del navegador pueden
+borrar datos. En file://, el comportamiento depende del navegador y la ruta.
+La aplicación no sobrescribe tus recetas con los valores iniciales al abrir.
+Para actualizar archivos publicados, incrementa CACHE en sw.js (v2, v3…).
+Cierra todas las pestañas de Comprapp y vuelve a abrir para activar la nueva
+caché. No cambies el nombre de la base IndexedDB ni borres sus almacenes.
+
+REPOSITORIO Y CLOUDFLARE PAGES
+Copia el CONTENIDO de esta carpeta en la raíz del repositorio existente,
+con index.html en la raíz. Revisa antes cualquier archivo que ya exista.
+No se ha creado ningún commit ni se ha enviado nada a GitHub o Cloudflare.
+Cuando decidas publicar, Pages admite estos archivos estáticos:
+  Framework: ninguno
+  Comando de compilación: exit 0
+  Directorio de salida: .
+  Rama: la rama que uses para publicar
+Si Pages ya está conectado al repositorio, el despliegue se activa al hacer
+push. git add y git commit por sí solos solo guardan cambios localmente.
+Referencia: https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
+
+ALTERNATIVA: CLOUDFLARE WORKERS
+Se incluye wrangler.jsonc con assets.directory = "." para archivos estáticos.
+Desde esta carpeta, con Wrangler instalado/configurado, el comando de
+publicación es npx wrangler deploy. No se ha ejecutado.
+.assetsignore evita servir instrucciones y configuración como contenido.
+Referencia: https://developers.cloudflare.com/workers/static-assets/binding/
+
+ARCHIVOS
+index.html, styles.css: interfaz y diseño adaptable.
+recipes.js: catálogo inicial y referencias de las capturas.
+app.js y features.js: planificación, edición, compra, IndexedDB, migración y copias.
+sw.js, manifest.webmanifest, assets/icon.svg: funcionamiento web sin conexión.
+assets/captura-*.png: imágenes originales de referencia.
+VERIFICACION.txt: alcance real de las pruebas locales.
+
+No se ha publicado ni probado en una dirección Cloudflare real, en un móvil
+físico ni como aplicación de App Store.
