@@ -1,8 +1,8 @@
 /* Additive, field-aware catalog updates. Existing user records are authoritative. */
-const CATALOG_FIELDS=['name','group','minutes','emoji','servings','ingredients','steps','capture','photo','source','roles','special','accompaniments'];
+const CATALOG_FIELDS=['name','group','minutes','emoji','servings','ingredients','steps','capture','photo','source','roles','special','accompaniments','occasions','specialOnly'];
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
-function catalogRecipe(r){return {...structuredClone(r),roles:r.roles||['first','second'],special:r.special||'',accompaniments:r.accompaniments||[r.group==='Verdura'?'extra-bread':'extra-salad']}}
-function officialCatalog(){return [...SEED.map(catalogRecipe),...extras()]}
+function catalogRecipe(r){return {...occasionDefaults(structuredClone(r)),roles:r.roles||['first','second'],special:r.special||'',accompaniments:r.accompaniments||[r.group==='Verdura'?'extra-bread':'extra-salad']}}
+function officialCatalog(){return [...SEED.map(catalogRecipe),...extras().map(occasionDefaults)]}
 function catalogRevision(records){const text=JSON.stringify(records);let hash=2166136261;for(let i=0;i<text.length;i++)hash=Math.imul(hash^text.charCodeAt(i),16777619);return 'catalog-1-'+(hash>>>0).toString(16)}
 function mergeCatalog(input,incoming=officialCatalog()){
  const s=structuredClone(input),officialIds=new Set(incoming.map(r=>r.id));
@@ -32,7 +32,7 @@ function mergeCatalog(input,incoming=officialCatalog()){
  for(const r of s.recipes)r.accompaniments=(r.accompaniments||[]).filter(id=>s.recipes.some(x=>x.id===id&&x.roles.includes('accompaniment')));
  const revision=catalogRevision(incoming),history=s.catalog?.migrations||[];
  s.catalog={schema:1,revision,baseline,deleted:[...removed],migrations:history.includes(revision)?history:[...history,revision]};
- return {state:s,changes};
+ return {state:normalizeMenuRules(normalizePreferences(s)),changes};
 }
 async function writeVerified(next,previous){
  return new Promise((resolve,reject)=>{

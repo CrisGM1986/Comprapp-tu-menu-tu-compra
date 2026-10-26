@@ -1,3 +1,51 @@
+COMPRAPP v6 — Variedad de alimentos y comida/cena
+
+Editar receta incluye Comida/Cena (ambas permitidas) y Alimentos principales.
+Se propone una clasificación inicial por el nombre de la receta, revisable.
+El huevo de un rebozado o el arroz minoritario de un guiso de garbanzos no se
+consideran automáticamente el alimento principal: revisa estos campos.
+Los postres que conservaban el uso genérico primero/segundo se clasifican
+como postres. Los usos específicos editados previamente se conservan.
+
+Reglas para primeros y segundos, tanto en comida como en cena:
+- Arroz principal: como máximo una vez por semana de lunes a viernes.
+- Huevo y otros alimentos principales: sin repetir en el mismo día ni en
+  días naturales consecutivos. Las categorías generales Verduras y Otros
+  están exentas para no impedir comer verduras cada día.
+- La preferencia favorita no anula estas reglas ni el uso comida/cena.
+- Se aprovechan ingredientes secundarios del sofrito, no el principal.
+- Si no se puede completar el formato, se avisa y no se reemplaza el menú.
+- Otra similar aplica las mismas reglas; el cambio manual muestra el
+  conflicto y lo bloquea. No se ofrecen postres para primero o segundo.
+- Los menús ya guardados no se reescriben al actualizar: genera un nuevo
+  menú para aplicar todas las reglas. Revisa la clasificación de tus recetas.
+
+COMPRAPP v5 — Ocasiones y gustos familiares
+
+Editar receta > Ocasiones especiales:
+Navidad, Semana Santa, Cumpleaños y tartas, Picnic y Más elaboradas.
+Puedes marcar varias ocasiones sin cambiar el grupo alimentario.
+«Reservar para ocasiones especiales» excluye del generador diario, pero
+permite escoger la receta manualmente desde los tres puntos del calendario.
+Se han marcado inicialmente seis recetas claramente especiales; puedes
+cambiar cualquier etiqueta o quitar la reserva.
+
+Preferencia de tu familia:
+- Normal: comportamiento habitual.
+- Me gusta mucho: prioridad al generar, con repetición entre semanas
+  permitida. Se sigue buscando variedad dentro de cada semana.
+- No me gusta: excluida del generador y de las alternativas automáticas.
+Las preferencias no sustituyen exclusiones de ingredientes o tiempo máximo.
+Los platos ya planificados se conservan; si uno pasa a «No me gusta»,
+aparece un aviso para cambiarlo. Generar otro menú aplica las preferencias.
+
+El recetario tiene filtros por ocasión y por preferencia. Las etiquetas y
+las preferencias se guardan, exportan e importan. Las preferencias de la
+familia nunca se sustituyen por una actualización del catálogo oficial.
+
+Esta entrega conserva las 65 recetas actuales más 4 acompañamientos/postres.
+No se ha publicado la web ni realizado commit o push.
+
 COMPRAPP v4 — Catálogo incremental, períodos y navegación móvil
 
 NOVEDADES DEL CATÁLOGO

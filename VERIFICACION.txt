@@ -1,3 +1,30 @@
+COMPRAPP v6 — Pruebas locales superadas en Edge
+- Arroz a banda martes impide otro arroz principal viernes de esa semana;
+  sí permite arroz en otra semana.
+- Tortilla lunes impide sándwich de huevo martes, permite miércoles.
+- Nueve generaciones de 1/2/4 semanas cumplen reglas y comida/cena.
+- Formato con cuatro principales diarios cumple restricciones.
+- Flan excluido del selector manual de primer plato.
+- Edición Comida/Cena persiste tras recarga y en copia validada.
+- Catálogo insuficiente produce aviso en lugar de un menú incompatible.
+- Sin errores JavaScript durante el recorrido.
+No se ha publicado ni probado físicamente el teléfono.
+
+COMPRAPP v5 — 26/10/2026
+Pruebas locales superadas en Edge mediante Playwright:
+- 65 recetas del catálogo y 4 acompañamientos/postres conservados.
+- Edición de ocasiones, reserva y favorito; persistencia tras recargar.
+- Filtros combinados por ocasión y preferencia.
+- Veinte generaciones de cuatro semanas excluyendo recetas reservadas y
+  recetas marcadas No me gusta en todos los platos visibles.
+- Receta favorita seleccionada en cada una de cuatro semanas con opciones.
+- Selección manual de receta especial disponible.
+- Actualización de catálogo conserva preferencias y ocasiones editadas.
+- Exportación/importación preserva preferencias; valores inválidos rechazados.
+- Sin desbordamiento a 393 píxeles; recarga offline; sin errores JavaScript.
+No se ha comprobado el teléfono físico ni el error anterior de la web real.
+La carga local con el catálogo actual sí funciona.
+
 CATÁLOGO INCREMENTAL — Pruebas adicionales superadas
 - Catálogo de 32 recetas más 4 acompañamientos/postres.
 - Migración de copia antigua con recetas personales, foto editada, receta
