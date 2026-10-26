@@ -1,3 +1,18 @@
+COMPRAPP v7 — Menú visual y lista única de compra
+
+- Fotos grandes en el calendario de ordenador y móvil.
+- En móvil: tres días en paralelo desde 390 px y dos en pantallas menores.
+  Desliza horizontalmente o usa las flechas para ver los demás días.
+  Las filas de comida/cena y tipos de plato permanecen alineadas.
+- Los tres puntos reúnen Ver receta, Sustituir automáticamente y Elegir
+  otra receta. Se mantienen las restricciones de variedad y comida/cena.
+- Mi compra > Añadir producto permite nombre, cantidad libre y sección.
+  Puedes editar, marcar comprado o eliminar cada producto añadido.
+  Se conservan al cambiar/regenerar el menú y forman parte de impresión,
+  descarga de texto y exportación/importación JSON. Se muestran separados
+  de los ingredientes calculados para no mezclar cantidades manuales.
+- Recetario y selector manual ordenados alfabéticamente en español.
+
 COMPRAPP v6 — Variedad de alimentos y comida/cena
 
 Editar receta incluye Comida/Cena (ambas permitidas) y Alimentos principales.

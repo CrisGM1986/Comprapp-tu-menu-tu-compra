@@ -1,3 +1,12 @@
+COMPRAPP v7 — Pruebas locales en Edge
+Superados: 3 columnas a 393 px y 2 a 375 px; fotos de al menos 120 px;
+menú de acciones, ver receta y selector manual; orden alfabético de ambos
+listados; añadir/editar/marcar/recargar productos propios; conservación al
+regenerar; descarga de texto; validación y exportación/importación de copia;
+eliminación; ancho móvil sin desbordamiento; funcionamiento sin conexión.
+Inspección visual del menú móvil. Sin errores JavaScript en el recorrido.
+Sin publicación ni comprobación en teléfono físico.
+
 COMPRAPP v6 — Pruebas locales superadas en Edge
 - Arroz a banda martes impide otro arroz principal viernes de esa semana;
   sí permite arroz en otra semana.
