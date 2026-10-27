@@ -12,7 +12,7 @@ const SEED_RAW=[
   "patata|800|g|0;magro de cerdo|600|g|1;zanahoria|200|g|0;cebolla|150|g|0;aceite de oliva|30|ml|4;agua|700|ml|4",
   "Dora el magro con el aceite. Añade cebolla y zanahoria troceadas y sofríe 8 minutos.\nIncorpora las patatas chascadas y el agua. Cocina tapado 30–35 minutos, hasta que carne y patata estén tiernas.",
   "",
-  "",
+  "assets/FOTOS/guiso-patatas-magro.png",
   "r0"
  ],
  [
@@ -23,7 +23,7 @@ const SEED_RAW=[
   "calabaza|800|g|0;patata|250|g|0;cebolla|150|g|0;aceite de oliva|25|ml|4;agua|700|ml|4",
   "Sofríe la cebolla picada con el aceite durante 5 minutos.\nAñade la calabaza y la patata en dados con el agua; cuece 20 minutos. Tritura y ajusta la textura.",
   "",
-  "",
+  "assets/FOTOS/crema-calabaza.png",
   "r1"
  ],
  [
@@ -34,7 +34,7 @@ const SEED_RAW=[
   "lomo de cerdo|600|g|1;jamón cocido|120|g|1;queso|120|g|2;aceite de oliva|20|ml|4",
   "Aplana los filetes de lomo, rellena con jamón y queso y enrolla; sujeta con palillos.\nDora con aceite y termina tapado a fuego suave 12–15 minutos, hasta cocinar el centro. Retira los palillos.",
   "",
-  "",
+  "assets/FOTOS/rollos-cinta-lomo-jamon-queso.png",
   "r2"
  ],
  [
@@ -45,7 +45,7 @@ const SEED_RAW=[
   "lomo de cerdo|600|g|1;naranja|3|ud|0;cebolla|150|g|0;aceite de oliva|25|ml|4",
   "Dora los filetes de lomo y reserva. Sofríe la cebolla 8 minutos.\nAñade el zumo de las naranjas, devuelve la carne y cocina 12–15 minutos a fuego suave.",
   "",
-  "",
+  "assets/FOTOS/lomo-salsa-naranja.png",
   "r3"
  ],
  [
@@ -56,7 +56,7 @@ const SEED_RAW=[
   "salmón|600|g|1;huevo|1|ud|2;pan rallado|60|g|3;cebolla|80|g|0;aceite de oliva|20|ml|4",
   "Retira piel y espinas del salmón y pícalo. Mezcla con huevo, cebolla muy picada y pan rallado.\nForma ocho filetes pequeños. Cocina en sartén con aceite 4–5 minutos por cada lado, hasta que el interior esté hecho.",
   "",
-  "",
+  "assets/FOTOS/filetes-rusos-salmon.png",
   "r4"
  ],
  [
@@ -67,7 +67,7 @@ const SEED_RAW=[
   "coliflor|1000|g|0;leche|500|ml|2;harina|40|g|3;mantequilla|40|g|2;queso|80|g|2",
   "Cuece la coliflor en ramilletes 12–15 minutos y escurre.\nFunde la mantequilla, rehoga la harina un minuto y añade la leche poco a poco removiendo. Cocina hasta espesar.\nCubre la coliflor con bechamel y queso. Gratina hasta dorar.",
   "",
-  "",
+  "assets/FOTOS/coliflor-bechamel.png",
   "r5"
  ],
  [
@@ -78,18 +78,18 @@ const SEED_RAW=[
   "garbanzos cocidos|600|g|4;arroz|160|g|3;patata|400|g|0;zanahoria|200|g|0;cebolla|150|g|0;aceite de oliva|25|ml|4;agua|1000|ml|4",
   "Sofríe cebolla y zanahoria picadas con el aceite.\nAñade patata en dados y agua. Cuece 10 minutos, incorpora arroz y cocina 18 minutos más.\nAñade los garbanzos escurridos en los últimos 5 minutos.",
   "",
-  "",
+  "assets/FOTOS/guiso-garbanzos-arroz-patatas.png",
   "r6"
  ],
  [
-  "Espaguetis con carbonara vegetariana",
+  "Espaguetis con carbonara vegetariana champiñones",
   "Pasta",
   25,
   "🍝",
   "espaguetis|320|g|3;champiñón|300|g|0;huevo|3|ud|2;queso|80|g|2;aceite de oliva|20|ml|4",
   "Cuece los espaguetis y reserva un vaso de agua de cocción. Saltea el champiñón con aceite.\nBate los huevos con queso. Mezcla la pasta y los champiñones con el huevo a fuego suave, removiendo y añadiendo agua de cocción hasta obtener una salsa cremosa y el huevo cocinado.",
   "",
-  "",
+  "assets/FOTOS/espaguetis-carbonara-vegetariana-champiñones.png",
   "r7"
  ],
  [
@@ -111,7 +111,7 @@ const SEED_RAW=[
   "merluza|600|g|1;patata|600|g|0;huevo|1|ud|2;pan rallado|50|g|3;cebolla|150|g|0;aceite de oliva|25|ml|4;agua|700|ml|4",
   "Pica la merluza sin espinas, mezcla con huevo y pan rallado y forma albóndigas.\nSofríe cebolla, añade patata en dados y agua; cocina 15 minutos.\nIncorpora las albóndigas y cuece suavemente otros 10–12 minutos hasta cocinar su interior.",
   "",
-  "assets/FOTOS/albondigas-meruluza-patatas-taco.jpeg",
+  "assets/FOTOS/albondigas-merluza-patatas-taco.jpeg",
   "r9"
  ],
  [
@@ -122,7 +122,7 @@ const SEED_RAW=[
   "pollo|600|g|1;pimiento|400|g|0;cebolla|150|g|0;tortillas de trigo|8|ud|3;aceite de oliva|25|ml|4",
   "Corta el pollo y las verduras en tiras. Saltea las verduras con el aceite durante 8 minutos.\nAñade el pollo y cocina hasta que quede completamente hecho. Sirve en las tortillas calientes.",
   "",
-  "",
+  "assets/FOTOS/fajitas-pollo-pimientos.png",
   "r10"
  ],
  [
@@ -133,7 +133,7 @@ const SEED_RAW=[
   "pan de molde|8|ud|3;huevo|4|ud|2;pavo cocido|160|g|1;lechuga|120|g|0;queso|100|g|2",
   "Cuece los huevos 10 minutos desde que hierve el agua, enfría, pela y corta.\nLava y seca la lechuga. Monta los sándwiches con huevo, pavo, lechuga y queso.",
   "",
-  "",
+  "assets/FOTOS/sandwich-huevo-cocido-pavo-queso-lechuga.png",
   "r11"
  ],
  [
@@ -144,7 +144,7 @@ const SEED_RAW=[
   "huevo|8|ud|2;espinaca|200|g|0;queso|100|g|2;aceite de oliva|20|ml|4",
   "Saltea las espinacas con la mitad del aceite.\nPrepara cuatro tortillas de dos huevos, rellena con espinacas y queso y dobla. Termina de cuajar el huevo.",
   "",
-  "",
+  "assets/FOTOS/tortilla-francesa-rellena-pavo-queso.png",
   "r12"
  ],
  [
@@ -155,7 +155,7 @@ const SEED_RAW=[
   "huevo|4|ud|2;patata|800|g|0;pulpo cocido|400|g|1;aceite de oliva|40|ml|4",
   "Corta las patatas en rodajas, mezcla con parte del aceite y hornea a 200 °C durante 30–35 minutos.\nCalienta el pulpo en rodajas. Cocina los huevos en sartén con el aceite restante. Sirve todo junto y rompe los huevos.",
   "",
-  "",
+  "assets/FOTOS/huevos-rotos-patata-pulpo.png",
   "r13"
  ],
  [
@@ -166,7 +166,7 @@ const SEED_RAW=[
   "merluza|500|g|1;zanahoria|600|g|0;patata|200|g|0;cebolla|100|g|0;aceite de oliva|20|ml|4;agua|900|ml|4",
   "Sofríe la cebolla con aceite, añade zanahoria y patata troceadas y agua. Cuece 20 minutos.\nAñade la merluza sin espinas y cocina 8 minutos más. Tritura hasta obtener una crema.",
   "",
-  "",
+  "assets/FOTOS/crema-merluza-nanahoria.png",
   "r14"
  ],
  [
@@ -177,7 +177,7 @@ const SEED_RAW=[
   "bagel|4|ud|3;queso fresco|200|g|2;tomate|300|g|0;huevo|4|ud|2;aceite de oliva|15|ml|4",
   "Abre y tuesta los bagels. Lava y corta el tomate.\nPrepara huevos revueltos con el aceite hasta que cuajen. Rellena los bagels con queso fresco, tomate y huevo.",
   "",
-  "",
+  "assets/FOTOS/bagel-queso-tomate-lechuga.png",
   "r15"
  ],
  [
@@ -188,7 +188,7 @@ const SEED_RAW=[
   "merluza|600|g|1;huevo|2|ud|2;harina|60|g|3;pan rallado|100|g|3;aceite de oliva|25|ml|4",
   "Corta la merluza sin espinas en tiras. Pasa por harina, huevo batido y pan rallado.\nColoca en una bandeja, pincela con aceite y hornea a 200 °C durante 15–20 minutos, girando a mitad, hasta que el interior esté hecho.",
   "",
-  "",
+  "assets/FOTOS/fingers-merluza.png",
   "r16"
  ],
  [
@@ -199,7 +199,7 @@ const SEED_RAW=[
   "arroz|320|g|3;langostino pelado|400|g|1;fumet|1000|ml|4;tomate triturado|150|g|4;cebolla|100|g|0;aceite de oliva|25|ml|4",
   "Sofríe cebolla y tomate con aceite. Añade el arroz y rehoga un minuto.\nVierte el fumet caliente y cocina 16–18 minutos. Incorpora los langostinos en los últimos 5 minutos y termina la cocción. Deja reposar 3 minutos.",
   "arroz",
-  "",
+  "assets/FOTOS/arroz-langostinos-fumet.png",
   "r17"
  ],
  [
@@ -210,7 +210,7 @@ const SEED_RAW=[
   "calabacín|1000|g|0;garbanzos cocidos|400|g|4;tomate triturado|250|g|4;cebolla|150|g|0;queso|100|g|2;aceite de oliva|25|ml|4",
   "Parte los calabacines a lo largo y hornea 20 minutos a 190 °C. Retira parte de la pulpa.\nSofríe cebolla y pulpa con aceite; añade tomate y garbanzos y cocina 10 minutos.\nRellena los calabacines, cubre con queso y gratina.",
   "calabacin",
-  "",
+  "assets/FOTOS/calabacines-rellenos.jpeg",
   "r18"
  ],
  [
@@ -221,18 +221,18 @@ const SEED_RAW=[
   "pollo|400|g|1;puerro|250|g|0;zanahoria|300|g|0;fideos|100|g|3;agua|1500|ml|4;aceite de oliva|20|ml|4",
   "Sofríe puerro y zanahoria con el aceite. Añade pollo y agua y cuece 25 minutos.\nDesmenuza el pollo cocinado y devuelve a la olla. Incorpora los fideos y cuece el tiempo indicado en su envase.",
   "sopa",
-  "",
+  "assets/FOTOS/sopa-pollo-puerro-zanahorias.png",
   "r19"
  ],
  [
-  "Puré de patatas con milanesa de lomo",
+  "Milanesa de lomo con puré de patatas",
   "Carne",
   40,
   "🍖",
   "patata|800|g|0;lomo de cerdo|600|g|1;leche|200|ml|2;mantequilla|25|g|2;huevo|2|ud|2;pan rallado|120|g|3;aceite de oliva|40|ml|4",
   "Cuece las patatas peladas 20 minutos, escurre y machaca con leche y mantequilla.\nPasa el lomo por huevo y pan rallado. Cocina en sartén con aceite por ambos lados hasta que el interior quede hecho. Sirve con el puré.",
   "pure",
-  "",
+  "assets/FOTOS/lomo-milanesa-pure-patatas.png",
   "r20"
  ],
  [
@@ -243,7 +243,7 @@ const SEED_RAW=[
   "carrillera de cerdo|800|g|1;ñoquis|500|g|3;cebolla|200|g|0;zanahoria|200|g|0;vino tinto|200|ml|4;agua|500|ml|4;aceite de oliva|30|ml|4",
   "Dora las carrilleras con el aceite y reserva. Sofríe cebolla y zanahoria.\nAñade el vino, cocina 5 minutos e incorpora carne y agua. Guisa tapado 90–110 minutos hasta ablandar.\nCuece los ñoquis según el envase y sirve con la salsa. El vino puede sustituirse por caldo; la cocción no garantiza eliminar todo el alcohol.",
   "",
-  "",
+  "assets/FOTOS/carrilleras-vino-noquis.png",
   "r21"
  ],
  [
@@ -254,7 +254,7 @@ const SEED_RAW=[
   "pan de perrito|4|ud|3;carne picada|500|g|1;tomate|200|g|0;lechuga|100|g|0;queso|80|g|2;aceite de oliva|15|ml|4",
   "Forma cuatro porciones alargadas de carne y aplánalas sobre la sartén caliente con aceite.\nCocina por ambos lados hasta hacer el centro. Abre los panes y rellena con carne, queso, tomate y lechuga lavada.",
   "perrito",
-  "",
+  "assets/FOTOS/perritos-carne-picada-aplastada.png",
   "r22"
  ],
  [
@@ -265,7 +265,7 @@ const SEED_RAW=[
   "merluza|600|g|1;patata|600|g|0;cebolla|150|g|0;aceite de oliva|40|ml|4",
   "Corta las patatas en tiras finas, sécalas y mézclalas con la mitad del aceite. Hornea a 200 °C 20–25 minutos, vigilando el dorado.\nPocha la cebolla con el aceite restante, añade la merluza sin espinas y cocina tapada 8–10 minutos hasta que esté hecha. Sirve con las patatas.",
   "merluza",
-  "",
+  "assets/FOTOS/merluza-patatas-paja.png",
   "r23"
  ],
  [
