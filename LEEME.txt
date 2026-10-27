@@ -1,3 +1,59 @@
+COMPRAPP v9 — Novedades
+
+EXPORTAR CATALOGO
+Si no se puede leer una foto, se indica el archivo que falta y se conserva el
+borrador. En Ajustes > Editar catálogo base, pulsa Vincular carpeta de fotos,
+selecciona la carpeta de Comprapp (o assets) y vuelve a exportar. Esto permite
+exportar también al abrir index.html directamente, sin servidor web.
+
+MOVER PLATOS
+Arrastra la imagen sobre otro plato para intercambiarlos entre días o entre
+comida y cena. En móvil, mantén pulsada la imagen un instante y arrastra.
+Desliza el calendario desde otras zonas. El intercambio respeta los tipos de
+plato, comida/cena y las reglas de variedad; si no es válido, se explica el
+motivo y se conservan ambos platos. Sigue disponible la sustitución manual.
+
+COMPRA
+Puedes quitar un producto calculado con su botón de eliminar. Se pide
+confirmación: al regenerar o modificar el menú se restauran los productos
+calculados. También puedes restaurarlos con el botón correspondiente.
+Los productos personales siguen siendo independientes.
+Harina y harina de trigo se suman. Los pimientos se reúnen manteniendo las
+cantidades de cada tipo. No se mezclan unidades incompatibles ni otras harinas.
+
+No se publica nada automáticamente.
+COMPRAPP v8 — Editor visual del catálogo base
+
+1. Abre Ajustes > Editar catálogo base.
+2. Edita o crea recetas con los formularios. Los ingredientes se añaden por
+   filas. Puedes cambiar foto, elaboración, tipo de plato, comida/cena,
+   alimentos principales, ocasiones, toque especial y acompañamientos.
+3. El borrador se guarda aparte en este navegador. Los cambios no alteran
+   tus recetas personales ni el menú, la compra o las preferencias familiares.
+4. Pulsa Exportar catálogo para publicar. Obtendrás un ZIP con recipes.js,
+   las imágenes necesarias, catalogo.json e instrucciones PUBLICAR.txt.
+5. Descomprime ese ZIP. Copia recipes.js y combina assets con la carpeta del
+   repositorio. No borres el resto de la app. Publica esos archivos mediante
+   tu procedimiento habitual de GitHub Pages o Cloudflare.
+6. Conserva el ZIP original: Importar catálogo permite continuar la edición
+   en otro dispositivo. Importa el ZIP tal como lo exporta Comprapp, sin
+   recomprimirlo. El importador no ejecuta el JavaScript del paquete.
+
+El catálogo exportado requiere Comprapp v8 o posterior. Publica primero los
+archivos de esta versión de la aplicación. No se ha hecho commit, push ni
+publicación desde aquí.
+
+Los identificadores permanecen estables al editar. Las recetas personales,
+los gustos, menús, casillas y compra no se exportan como catálogo base.
+Las actualizaciones oficiales respetan los campos editados y las recetas
+eliminadas por cada usuario. Quitar una receta del catálogo base no elimina
+su ejemplar ya guardado por otros usuarios.
+
+El borrador base es independiente de la copia JSON de la cocina personal:
+exporta su ZIP para respaldarlo. Cargar catálogo publicado reemplaza solo el
+borrador después de confirmarlo. Una foto que falte bloquea la exportación
+con un aviso; vuelve a subirla o quítala antes de exportar.
+
 COMPRAPP v7 — Menú visual y lista única de compra
 
 - Fotos grandes en el calendario de ordenador y móvil.
@@ -253,3 +309,4 @@ VERIFICACION.txt: alcance real de las pruebas locales.
 
 No se ha publicado ni probado en una dirección Cloudflare real, en un móvil
 físico ni como aplicación de App Store.
+

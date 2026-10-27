@@ -718,7 +718,173 @@ const SEED_RAW=[
   "",
   "assets/FOTOS/pan.jpeg",
   "r64"
- ]
+ ],
+[
+  "Batido de fresas",
+  "Fruta",
+  10,
+  "🍓",
+  "fresa|600|g|0;leche|500|ml|2;yogur natural|125|g|2",
+  "Lava las fresas y retira las hojas. Tritura con la leche y el yogur. Sirve bien frío.",
+  "",
+  "assets/FOTOS/batido-fresas.jpeg",
+  "r65",
+  {
+    "course": "postre",
+    "mealTypes": [
+      "comida",
+      "cena"
+    ],
+    "canBeAccompaniment": false,
+    "mainFoods": [
+      "fresa",
+      "leche"
+    ],
+    "foodGroups": [
+      "Fruta",
+      "Lácteos"
+    ]
+  }
+],
+[
+  "Ensalada de boquerones, queso fresco y aceitunas",
+  "Verdura",
+  15,
+  "🥗",
+  "boquerones en vinagre|180|g|1;lechuga|250|g|0;tomate|350|g|0;cebolla|130|g|0;zanahoria|150|g|0;queso fresco|180|g|2;maíz dulce|120|g|4;aceitunas verdes|80|g|4;aceitunas negras|80|g|4;aceite de oliva|30|ml|4",
+  "Lava y corta la lechuga, el tomate, la cebolla y la zanahoria. Añade el maíz, las aceitunas, el queso fresco y los boquerones en vinagre. Aliña con aceite de oliva.",
+  "",
+  "assets/FOTOS/ensalada-boquerones.jpeg",
+  "r66",
+  {
+    "course": "primero",
+    "mealTypes": [
+      "comida",
+      "cena"
+    ],
+    "canBeAccompaniment": false,
+    "mainFoods": [
+      "boquerones",
+      "lechuga",
+      "queso fresco"
+    ],
+    "foodGroups": [
+      "Verdura",
+      "Pescado",
+      "Lácteos"
+    ]
+  }
+],
+[
+  "Merluza a la plancha con espinacas y tomate",
+  "Pescado",
+  25,
+  "🐟",
+  "merluza|700|g|1;espinaca|600|g|0;tomate|400|g|0;ajo|2|ud|0;aceite de oliva|35|ml|4",
+  "Saltea las espinacas con el ajo y un poco de aceite. Cocina la merluza a la plancha y sirve con las espinacas y el tomate cortado.",
+  "",
+  "assets/FOTOS/merluza-espinacas-ensalada-tomate.jpeg",
+  "r67",
+  {
+    "course": "segundo",
+    "mealTypes": [
+      "comida",
+      "cena"
+    ],
+    "canBeAccompaniment": false,
+    "mainFoods": [
+      "merluza",
+      "espinaca",
+      "tomate"
+    ],
+    "foodGroups": [
+      "Pescado",
+      "Verdura"
+    ]
+  }
+],
+[
+  "Natillas caseras",
+  "Postres",
+  20,
+  "🍮",
+  "leche|650|ml|2;yema de huevo|4|ud|2;azúcar|100|g|4;maicena|35|g|3;limón|1|ud|0",
+  "Calienta la leche con piel de limón. Mezcla las yemas con el azúcar y la maicena. Incorpora la leche y cocina removiendo hasta espesar. Reparte en copas y enfría.",
+  "",
+  "assets/FOTOS/natillas.jpeg",
+  "r68",
+  {
+    "course": "postre",
+    "mealTypes": [
+      "comida",
+      "cena"
+    ],
+    "canBeAccompaniment": false,
+    "mainFoods": [
+      "leche",
+      "yema de huevo"
+    ],
+    "foodGroups": [
+      "Lácteos",
+      "Huevos"
+    ]
+  }
+],
+[
+  "Albóndigas de ternera con patatas y ensalada",
+  "Carne",
+  45,
+  "🍲",
+  "carne picada de ternera|650|g|1;huevo|1|ud|2;pan rallado|70|g|3;patata|750|g|0;cebolla|150|g|0;caldo de carne|300|ml|4;lechuga|150|g|0;pepino|200|g|0;tomate|250|g|0;aceite de oliva|40|ml|4",
+  "Mezcla la carne picada con el huevo y el pan rallado, y forma las albóndigas. Dóralas y guísalas con cebolla y un poco de caldo. Prepara las patatas y sirve con una ensalada de lechuga, pepino y tomate.",
+  "",
+  "assets/FOTOS/albondigas-ternera-patatas-ensalada.jpeg",
+  "r69",
+  {
+    "course": "segundo",
+    "mealTypes": [
+      "comida",
+      "cena"
+    ],
+    "canBeAccompaniment": false,
+    "mainFoods": [
+      "ternera",
+      "patata",
+      "lechuga"
+    ],
+    "foodGroups": [
+      "Carne",
+      "Verdura"
+    ]
+  }
+],
+[
+  "Arroz con costillas de cerdo",
+  "Carne",
+  50,
+  "🥘",
+  "arroz|360|g|3;costilla de cerdo|800|g|1;cebolla|180|g|0;zanahoria|180|g|0;tomate triturado|200|g|4;carne de pimiento choricero|35|g|4;caldo de carne|1100|ml|4;aceite de oliva|35|ml|4",
+  "Fríe las costillas en un poco de aceite y reserva. Sofríe en el mismo aceite la cebolla y la zanahoria. Añade el tomate triturado y la carne de pimiento choricero. Incorpora el arroz, las costillas y el caldo de carne y cocina hasta que el arroz esté en su punto.",
+  "",
+  "assets/FOTOS/arroz-costilla.jpeg",
+  "r70",
+  {
+    "course": "primero",
+    "mealTypes": [
+      "comida"
+    ],
+    "canBeAccompaniment": false,
+    "mainFoods": [
+      "arroz",
+      "costilla de cerdo",
+      "pimiento choricero"
+    ],
+    "foodGroups": [
+      "Cereales",
+      "Carne"
+    ]
+  }
+]
 ];
-const SEED=SEED_RAW.map((r,i)=>({id:r[8],name:r[0],group:r[1],minutes:r[2],emoji:r[3],servings:4,ingredients:r[4].split(';').map(x=>{const [name,qty,unit,aisle]=x.split('|');return {name,qty:+qty,unit,aisle:AISLES[+aisle]}}),steps:r[5].replace(/\\n/g,'\n'),capture:r[6]||'',photo:r[7]||'',source:r[7]?'Fotografía aportada. Elaboración casera orientativa.':i>=17?'Nombre tomado de las capturas. Elaboración casera propuesta.':'Plato del listado. Elaboración casera propuesta.'}));
+const SEED=SEED_RAW.map((r,i)=>({id:r[8],name:r[0],group:r[1],minutes:r[2],emoji:r[3],servings:4,ingredients:r[4].split(';').map(x=>{const [name,qty,unit,aisle]=x.split('|');return {name,qty:+qty,unit,aisle:AISLES[+aisle]}}),steps:r[5].replace(/\\n/g,'\n'),capture:r[6]||'',photo:r[7]||'',source:r[7]?'Fotografía aportada. Elaboración casera orientativa.':i>=17?'Nombre tomado de las capturas. Elaboración casera propuesta.':'Plato del listado. Elaboración casera propuesta.',...(r[9]||{})}));
 const CAPTURES={arroz:['captura-arroz.png',351,220,58,107,85,89],calabacin:['captura-platos.png',387,619,76,32,85,57],sopa:['captura-platos.png',387,619,76,196,84,88],pure:['captura-platos.png',387,619,75,470,85,90],perrito:['captura-cenas.png',340,605,59,115,84,126],merluza:['captura-cenas.png',340,605,58,424,84,106]};
