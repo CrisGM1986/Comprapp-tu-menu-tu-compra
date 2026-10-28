@@ -255,7 +255,8 @@ const SEED_RAW=[
   "Forma cuatro porciones alargadas de carne y aplánalas sobre la sartén caliente con aceite.\nCocina por ambos lados hasta hacer el centro. Abre los panes y rellena con carne, queso, tomate y lechuga lavada.",
   "perrito",
   "assets/FOTOS/perritos-carne-picada-aplastada.png",
-  "r22"
+  "r22",
+  {"meals":["Cena"]}
  ],
  [
   "Merluza con patatas paja",

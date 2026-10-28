@@ -1,0 +1,12 @@
+const FRUIT_SEASONS={
+ winter:{label:'invierno',months:'diciembre–febrero',fruits:['naranja','mandarina','kiwi','manzana'],photo:'assets/FOTOS/fruta-invierno-acuarela.png'},
+ spring:{label:'primavera',months:'marzo–mayo',fruits:['fresa','cereza','albaricoque','níspero'],photo:'assets/FOTOS/fruta-primavera-acuarela.png'},
+ summer:{label:'verano',months:'junio–agosto',fruits:['sandía','melón','melocotón','ciruela'],photo:'assets/FOTOS/fruta-verano-acuarela.png'},
+ autumn:{label:'otoño',months:'septiembre–noviembre',fruits:['uva','pera','granada','caqui'],photo:'assets/FOTOS/fruta-otono-acuarela.png'}
+};
+const NATURAL_YOGURT_PHOTO='assets/FOTOS/yogur-natural-acuarela.png';
+function fruitSeasonForDate(value){let date=value==null?new Date():new Date(typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)?value+'T12:00:00':value);if(!Number.isFinite(date.getTime()))date=new Date();const month=date.getMonth();return month===11||month<2?'winter':month<5?'spring':month<8?'summer':'autumn'}
+function applyDefaultDessertIllustrations(recipes){let changed=0;for(const r of recipes){if(r.photo||r.capture||r.seasonalPhotos!==undefined)continue;if(r.id==='extra-fruit'){r.seasonalPhotos=Object.fromEntries(Object.entries(FRUIT_SEASONS).map(([season,data])=>[season,data.photo]));changed++}else if(r.id==='extra-yogurt'){r.photo=NATURAL_YOGURT_PHOTO;changed++}}return changed}
+function recipeIllustration(recipe,date){if(recipe.photo)return {path:recipe.photo,season:null};if(recipe.capture)return {path:'',season:null};const season=fruitSeasonForDate(date),path=recipe.seasonalPhotos?.[season]||'';return {path,season:path?season:null}}
+function seasonalFruitDetails(recipe,date){const image=recipeIllustration(recipe,date);if(!image.season)return '';const season=FRUIT_SEASONS[image.season];return `<p class="muted seasonal-fruit-note">Fruta de ${season.label} (${season.months}).${recipe.id==='extra-fruit'?' Opciones ilustradas: '+esc(season.fruits.join(', '))+'.':''} La imagen es orientativa; puedes elegir la fruta en los ingredientes de la receta.</p>`}
+function validateIllustrationFields(recipe){if(recipe.seasonalPhotos===undefined)return;const photos=recipe.seasonalPhotos;if(!photos||typeof photos!=='object'||Array.isArray(photos))throw Error('Ilustraciones de temporada inválidas.');const keys=Object.keys(photos);if(keys.length!==0&&(keys.length!==4||keys.some(key=>!Object.hasOwn(FRUIT_SEASONS,key)||!photos[key]||!validPhoto(photos[key]))))throw Error('Incluye una imagen válida para cada estación.');}
