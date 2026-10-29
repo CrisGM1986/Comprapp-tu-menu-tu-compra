@@ -310,3 +310,22 @@ VERIFICACION.txt: alcance real de las pruebas locales.
 No se ha publicado ni probado en una dirección Cloudflare real, en un móvil
 físico ni como aplicación de App Store.
 
+
+NOVEDADES v17
+Para intercambiar platos, toca una receta del menú y después otra.
+La primera queda resaltada; toca la misma para cancelar (o pulsa Escape).
+Deslizar sobre las fotos desplaza el calendario sin seleccionar recetas.
+Los postres se muestran con imágenes y tarjetas más compactas.
+En Mi compra, Marcar todo como comprado conserva los productos marcados;
+Desmarcar todo permite recuperarlos sin borrar cantidades ni productos propios.
+Las imágenes de fruta cambian según la estación de la fecha del menú.
+
+GUSTOS v18
+Toca el corazón de la foto del recetario para recorrer estos estados:
+- Vacío: no me gusta; no entra en el menú automático.
+- Un corazón rojo: me gusta.
+- Dos corazones rojos: me encanta; tiene más prioridad entre semanas.
+Se conserva la variedad, el tiempo y los usos de comida/cena de cada receta.
+Los gustos anteriores se conservan: Normal equivale a un corazón y favorito a dos.
+Las nuevas recetas personales y las que llegan en actualizaciones empiezan sin marcar.
+Los platos ya planificados se mantienen hasta que los cambies o generes otro menú.

@@ -14,3 +14,44 @@ Pruebas superadas en Edge:
 Los intercambios válidos se probaron con datos controlados; también se verificó
 el rechazo de cambios incompatibles. No se probó un móvil físico ni se publicó
 esta versión en GitHub Pages o Cloudflare.
+
+COMPRAPP v16 — Verificación local, 29/10/2026
+- Acuarelas: fruta de invierno, primavera, verano y otoño, más yogur natural.
+  La estación corresponde a la fecha del plato del menú (meses de España).
+  En el recetario se utiliza la fecha actual. Se respetan fotos personalizadas.
+- Exportación/importación/exportación de un ZIP con las cinco imágenes reales:
+  conserva las cuatro estaciones y el yogur. Se validan las rutas y los recursos offline.
+- Móvil: las fotos permiten scroll nativo. El botón Mover admite arrastre directo
+  o un toque para elegir destino. No usa pulsación larga sobre la imagen.
+  Simulados: arrastre táctil, elección de destino, cancelación, rechazo de tipos
+  incompatibles y aceptación o rechazo del aviso de ingredientes principales repetidos.
+- Compra: Marcar todo como comprado incluye productos calculados y añadidos a mano;
+  guarda las marcas sin borrar productos. Desmarcar todo revierte ambas clases.
+- Regresión: menú de lunes a domingo con postres cotidianos entre semana.
+- Sintaxis de todos los scripts y existencia de todos los recursos del caché: correctas.
+
+Estas comprobaciones de v16 se realizaron en Node con interfaz simulada y archivos
+reales para el ZIP. No son una prueba en navegador ni en un teléfono físico.
+No se ha publicado ni desplegado esta versión.
+
+COMPRAPP v17 — Verificación local, 29/10/2026
+Sustituye el botón Mover de v16 por selección de dos recetas.
+Comprobado con interfaz simulada: dos toques y teclado intercambian y guardan;
+selección sincronizada entre vistas; mismo plato y Escape cancelan; el scroll
+y los controles de opciones no seleccionan; rechazos de destinos incompatibles
+y avisos de ingredientes principales repetidos conservan el menú correctamente.
+El postre tiene miniatura de 48 px en ordenador y foto de 52 px en móvil,
+sin el tiempo de elaboración en su tarjeta. Mantiene acceso a opciones.
+Sintaxis y cambios revisados; sin prueba visual en navegador o móvil físico.
+No publicado.
+
+COMPRAPP v18 — Verificación local, 29/10/2026
+Interfaz simulada: botones sobre foto con corazón vacío, uno rojo y dos rojos;
+ciclo por los tres estados guardado; filtros y etiquetas sincronizados.
+Verificados gustos anteriores y fusión de catálogo; nuevas incorporaciones
+sin marcar; copias personales conservan gustos y el catálogo exportado los excluye.
+Menú controlado de dos semanas: favorita presente en ambas, sin recetas sin corazón;
+sin recetas aprobadas se informa del problema sin sustituir el menú anterior.
+Se respetan las recetas reservadas para ocasiones especiales.
+Sintaxis de los scripts y recursos offline comprobados.
+No comprobado visualmente en navegador o móvil físico. Sin publicar.
