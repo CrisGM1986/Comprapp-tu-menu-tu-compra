@@ -55,3 +55,21 @@ sin recetas aprobadas se informa del problema sin sustituir el menú anterior.
 Se respetan las recetas reservadas para ocasiones especiales.
 Sintaxis de los scripts y recursos offline comprobados.
 No comprobado visualmente en navegador o móvil físico. Sin publicar.
+
+COMPRAPP v19 — Verificación local, 29/10/2026
+Pruebas en Node con interfaz simulada:
+- Menú vegetariano de lunes a domingo, incluidos postres; detección por ingredientes
+  y clasificación manual; huevos/lácteos admitidos y carnes, pescados, caldos animales
+  y gelatina excluidos en ejemplos controlados.
+- Activar el ajuste sustituye platos incompatibles; migración de copias antiguas
+  añade los campos nuevos y valida ajustes, autores y relaciones de salsas.
+- Recetas anteriores con autoría Tere y las cinco salsas con autoría Comprapp;
+  cambios de autoría y clasificación desde la tabla.
+- Salsas opcionales, independientes del acompañamiento y para primero y segundo;
+  selección, retirada, suma de cantidades y descuento de despensa. La salsa viaja
+  con el plato al intercambiar días; las salsas de segundos ocultos no se compran.
+- Exportación e importación de ZIP real con autoría, clasificación y sugerencias.
+- Campos del formulario, sintaxis de todos los scripts y recursos offline.
+No se accedió al contenido del vídeo de TikTok. Las salsas básicas se añadieron
+con autorización del usuario como propuestas editables, no copiadas del vídeo.
+Sin prueba visual en navegador o móvil físico. No publicado ni desplegado.

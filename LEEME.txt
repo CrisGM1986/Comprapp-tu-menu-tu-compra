@@ -329,3 +329,17 @@ Se conserva la variedad, el tiempo y los usos de comida/cena de cada receta.
 Los gustos anteriores se conservan: Normal equivale a un corazón y favorito a dos.
 Las nuevas recetas personales y las que llegan en actualizaciones empiezan sin marcar.
 Los platos ya planificados se mantienen hasta que los cambies o generes otro menú.
+
+NOVEDADES v19
+Ajustes > Menú vegetariano: sin carne ni pescado; incluye huevos y lácteos.
+En cada receta puedes elegir detección por ingredientes, apta o no apta.
+Al activar el ajuste se mantienen los platos vegetarianos compatibles y se
+sustituyen los demás. Si no hay variedad suficiente, no se guardan cambios.
+Autor/a es editable en la ficha y en la tabla, también por grupos.
+Las recetas anteriores figuran a nombre de Tere; las salsas propuestas, Comprapp.
+Grupo Salsas: tomate, bechamel, yogur, champiñones y pimienta. Son propuestas
+editables propias, no una transcripción del vídeo. Marca sus corazones para usarlas.
+En los tres puntos de un primer o segundo plato, elige Salsa opcional.
+Cada plato admite su propia salsa además del acompañamiento. Solo la salsa elegida
+se suma a la compra, descontando lo disponible en despensa. Para quitarla, Sin salsa.
+La ficha permite vincular salsas sugeridas y el selector las presenta primero.
