@@ -16,7 +16,7 @@ function mergeCatalog(input,incoming=officialCatalog()){
  for(const official of incoming){
    const saved=s.recipes.find(r=>r.id===official.id);
    if(removed.has(official.id)){baseline[official.id]=structuredClone(official);continue}
-   if(!saved){s.recipes.push({...structuredClone(official),origin:'official',preference:hadMetadata?'dislike':'normal',editedFields:[]});changes.added++}
+   if(!saved){s.recipes.push({...structuredClone(official),origin:'official',preference:official.initialPreference??(hadMetadata?'dislike':'normal'),editedFields:[]});changes.added++}
    else if(saved.origin!=='personal'){
      const previousRecipe=previous[official.id];const old=previousRecipe?normalizeMenuRules({recipes:[structuredClone(previousRecipe)]}).recipes[0]:undefined;let changed=false;
      for(const key of CATALOG_FIELDS){

@@ -59,3 +59,5 @@ body{background:#f7f8f5}header{background:white}nav button{display:flex;align-it
 .recipe-heart:hover{background:#fff3f3;color:#c72238}
 .recipe-heart:disabled{opacity:.65;cursor:wait}
 @media print{.recipe-heart{display:none}}
+
+.special-tip{flex-shrink:0;width:44px;min-width:44px;height:44px;padding:9px;border:0;background:#fff8d8;border-radius:50%;cursor:pointer}.special-tip svg{width:26px;height:26px}.dish-caption{flex-wrap:wrap}.special-tip-text{white-space:pre-wrap;line-height:1.6}@media print{.special-tip{display:none}}

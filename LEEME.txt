@@ -343,3 +343,9 @@ En los tres puntos de un primer o segundo plato, elige Salsa opcional.
 Cada plato admite su propia salsa además del acompañamiento. Solo la salsa elegida
 se suma a la compra, descontando lo disponible en despensa. Para quitarla, Sin salsa.
 La ficha permite vincular salsas sugeridas y el selector las presenta primero.
+
+RECETAS TITO Y MÓNICA
+Siete recetas incorporadas con su foto y un corazón. La pizza de pavo se
+consideró repetida y no se añadió. Las cantidades son orientativas y pueden
+ajustarse desde el recetario. La tarta Pantera Rosa queda fuera del menú
+vegetariano porque los pastelitos comerciales llevan colorante E120.

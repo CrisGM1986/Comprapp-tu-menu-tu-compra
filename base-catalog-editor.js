@@ -1,5 +1,5 @@
 let baseDraft=null,baseSearch='';
-const BASE_FIELDS=['id','name','author','vegetarianUse','sauces','group','minutes','emoji','servings','ingredients','steps','capture','photo','seasonalPhotos','source','roles','special','accompaniments','occasions','specialOnly','meals','mainFoods','dayPreference','airFryerUse','menuRulesVersion'];
+const BASE_FIELDS=['id','initialPreference','name','author','vegetarianUse','sauces','group','minutes','emoji','servings','ingredients','steps','capture','photo','seasonalPhotos','source','roles','special','accompaniments','occasions','specialOnly','meals','mainFoods','dayPreference','airFryerUse','menuRulesVersion'];
 function cleanBase(r){return Object.fromEntries(BASE_FIELDS.filter(k=>r[k]!==undefined).map(k=>[k,structuredClone(r[k])]))}
 function freshBase(){return {format:'comprapp-base',version:1,recipes:officialCatalog().map(cleanBase),assets:{}}}
 function baseGet(){return new Promise((resolve,reject)=>{const r=db.transaction('data').objectStore('data').get('baseCatalogDraft');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}

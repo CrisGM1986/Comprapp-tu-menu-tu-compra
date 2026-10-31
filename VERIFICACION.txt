@@ -73,3 +73,24 @@ Pruebas en Node con interfaz simulada:
 No se accedió al contenido del vídeo de TikTok. Las salsas básicas se añadieron
 con autorización del usuario como propuestas editables, no copiadas del vídeo.
 Sin prueba visual en navegador o móvil físico. No publicado ni desplegado.
+
+30/10/2026 — Incorporación parcial de recetas de Tito y Mónica
+Añadidas gulas con gambas y vieiras con ajo y perejil; una sola entrada para las
+dos imágenes iguales de vieiras. Ambas con fotografía, autoría y corazón inicial.
+Comprobados metadatos, hasta tres alimentos principales, preferencia inicial,
+preservación de gustos y eliminaciones posteriores, ZIP con fotos reales y recursos offline.
+Las otras seis recetas esperan aclaración de ingredientes y posible duplicado de pizza.
+Pruebas con Node e interfaz simulada; sin prueba en móvil físico ni publicación.
+
+31/10/2026 — Recetas de Tito y Mónica completadas
+Añadidas siete recetas distintas: carbonara con nata y bacon, caracolas a la
+boloñesa de ternera, Wellington de cerdo con jamón serrano, vieiras, gulas
+con gambas, tarta Pantera Rosa y cocido en olla rápida con rellenos.
+La pizza de pavo se omitió por indicación expresa del usuario al considerarla
+repetida; la segunda imagen de vieiras tampoco generó otro registro.
+Las cantidades y los tiempos son orientativos. Los pasteles Pantera Rosa
+contienen E120; la tarta está marcada no vegetariana.
+Prueba local: siete identificadores únicos, autoría, fotos existentes,
+clasificaciones, un corazón inicial, respeto de preferencias personales y
+eliminaciones, validación de copia, exportación/importación ZIP con las fotos,
+recursos sin conexión y sintaxis de los scripts. Sin publicación.
