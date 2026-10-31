@@ -79,3 +79,31 @@ body{background:#f7f8f5}header{background:white}nav button{display:flex;align-it
 @media print{.recipe-browser-controls{display:none}}
 
 .recipe-detail .recipe-byline{margin:-4px 0 16px;color:var(--green);font-size:15px;font-weight:600}
+
+.mercadona-estimate{margin:18px 0 22px;padding:14px 16px;border:1px solid #cad9ba;border-radius:14px;background:#f5faed}
+.mercadona-price-note{margin:0 0 8px;color:#445d34;font-size:13px;line-height:1.4}
+.mercadona-estimate summary{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;min-height:44px;cursor:pointer;font-weight:650}
+.mercadona-estimate summary strong{color:var(--green)}
+.mercadona-estimate-body{padding-top:8px;border-top:1px solid #d9e5cc;font-size:13px}
+.mercadona-estimate-body ul{list-style:none;padding:0;margin:0}
+.mercadona-estimate-body li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #d9e5cc;line-height:1.5}
+.mercadona-estimate-body li strong{white-space:nowrap}
+.mercadona-estimate-body a{color:var(--green);text-decoration:underline}
+.mercadona-estimate-body p{margin:10px 0 0;color:#52614b}
+@media(max-width:600px){.mercadona-estimate{padding:12px}.mercadona-estimate summary{align-items:flex-start}.mercadona-estimate-body li{flex-wrap:wrap}}
+@media print{.mercadona-estimate{display:none}}
+.shopping .shoprow .shop-amount{flex:0 0 100px;text-align:right}
+.shopping .shoprow .shop-price{display:flex;flex:0 0 102px;flex-direction:column;align-items:flex-end;text-align:right;text-decoration:none;line-height:1.2;color:var(--ink)}
+.shopping .shop-price b{white-space:nowrap}
+.shopping .shop-price small{display:block;font-size:11px;color:#647357;white-space:nowrap}
+.shopping .shoprow:has(input:checked) .shop-price{text-decoration:none;color:var(--ink)}
+@media(max-width:600px){
+ .shopping .calculated-product{display:grid;grid-template-columns:minmax(0,1fr) minmax(64px,auto) minmax(80px,auto) 44px;gap:5px 6px}
+ .shopping .calculated-product>label{grid-column:1/4;grid-row:1;min-width:0}
+ .shopping .calculated-product>.shop-amount{grid-column:2;grid-row:2}
+ .shopping .calculated-product>.shop-price{grid-column:3;grid-row:2}
+ .shopping .calculated-product>button{grid-column:4;grid-row:1/3}
+ .shopping .own-product{flex-wrap:wrap;gap:8px}
+ .shopping .own-product>label{flex:1 1 calc(100% - 104px)}
+ .shopping .own-product>.shop-amount,.shopping .own-product>.shop-price{flex:0 0 auto}
+}
