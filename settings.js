@@ -15,8 +15,9 @@ function settingsScreen(){
  <details class="settings-disclosure advanced-settings"><summary>Ajustes avanzados</summary>
  <section><h2>Generación</h2><label><input name="optimize" form="settingsForm" type="checkbox" ${s.optimize?'checked':''}> Aprovechar ingredientes compartidos para simplificar la compra</label><p class="muted">Revisa siempre los ingredientes si hay alergias o intolerancias.</p><button type="submit" form="settingsForm">Guardar ajustes</button></section>
  <section><h2>Copia de seguridad</h2><p>Guarda recetas, fotos, menú, despensa y compra para recuperarlos o llevarlos a otro dispositivo.</p><div class="actions"><button type="button" id="export">Descargar copia</button><label class="button">Restaurar copia<input id="import" type="file" accept="application/json,.json" hidden></label></div><p class="muted">Restaurar sustituye los datos actuales tras confirmarlo. Los datos están guardados en este navegador.</p></section>
+ ${localDataSettings()}
  ${catalogSettings()}
- <section><h2>Actualización</h2><p>Comprapp v24 · <span id="screen-info"></span></p><button type="button" id="refresh-app">Comprobar actualización</button><p class="muted">Los cambios de la aplicación conservan tu cocina si mantienes la misma dirección y navegador.</p></section>
+ <section><h2>Actualización</h2><p>Comprapp v25 · <span id="screen-info"></span></p><button type="button" id="refresh-app">Comprobar actualización</button><p class="muted">Los cambios de la aplicación conservan tu cocina si mantienes la misma dirección y navegador.</p></section>
  <details><summary>Sobre el recetario</summary><p class="muted">${SEED.length} recetas del catálogo y propuestas editables de acompañamientos y postres. Las elaboraciones son orientativas y puedes adaptarlas en el recetario.</p></details>
  </details></div>`;
 }
@@ -35,7 +36,7 @@ function saveMenuSettings(form){
   s.checked={};
  },'Ajustes guardados');
 }
-function bindSettingsExtras(){
+function bindSettingsExtras(){bindLocalDataSettings();
  const daysControl=document.querySelector('[name=calendarDays]');if(daysControl)daysControl.onchange=()=>{$('#weekend-time-field').hidden=daysControl.value!=='7'};
  const manager=$('#manage-recipes-settings');if(manager)manager.onclick=()=>openRecipeManager('personal');
 }

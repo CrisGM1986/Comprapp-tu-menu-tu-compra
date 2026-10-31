@@ -110,3 +110,15 @@ Se corrigieron rutas de siete fotos trasladadas de FOTOS/nuevas a FOTOS y se
 retiraron tres capturas inexistentes de la precarga; no se restauraron imágenes.
 Estas comprobaciones no son una prueba visual en navegador ni en móvil físico.
 No publicado.
+
+COMPRAPP v25 — 31/10/2026
+Verificación con base de datos y pantalla simuladas, sin acceder a IndexedDB real:
+- Abrir la advertencia no cambia datos. Incluye pérdida de recetas y preferencias,
+  opciones de exportación, cancelar y confirmación explícita del borrado.
+- La transacción elimina todas las claves personales y de recuperación; escribe
+  catálogo y ajustes iniciales. Un fallo simulado conserva los datos anteriores.
+- Exportación e importación de fichas personales con autoría, foto incrustada y
+  dependencias de salsas/acompañamientos; sin gustos ni ajustes. Reimportar no duplica
+  fichas iguales; una colisión con cambios crea otra receta sin sobrescribirla.
+- Sintaxis y recursos offline comprobados. No se ha restablecido la cocina real.
+Sin validación en móvil físico. No publicado.
