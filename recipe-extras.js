@@ -9,10 +9,10 @@ function isVegetarian(recipe){
 function normalizeRecipeExtras(s){
  for(const r of s.recipes){r.author??='Tere';r.vegetarianUse??='auto';r.sauces??=(r.group==='Carne'||/albondiga/.test(norm(r.name)))?['sauce-tomato','sauce-mushroom','sauce-pepper'].filter(id=>s.recipes.some(x=>x.id===id&&x.roles?.includes('sauce'))):[]}
  for(const p of s.plan||[]){p.sauce??='';p.secondSauce??=''}
- if(s.settings)s.settings.vegetarian??=false;
+ if(s.settings){s.settings.vegetarian??=false;s.settings.preferredAuthor??='';s.settings.authorMix??='mix'}
  return s;
 }
-function validateRecipeExtras(s){
+function validateRecipeExtras(s){validateAuthorSettings(s);
  if(s.settings?.vegetarian!==undefined&&typeof s.settings.vegetarian!=='boolean')throw Error('Opción vegetariana inválida.');
  for(const r of s.recipes||[]){if(typeof r.author!=='string'||r.author.length>120)throw Error('Autoría inválida.');if(!Object.hasOwn(VEGETARIAN_CHOICES,r.vegetarianUse))throw Error('Clasificación vegetariana inválida.');if(!Array.isArray(r.sauces)||r.sauces.some(id=>typeof id!=='string'||!s.recipes.some(x=>x.id===id&&x.roles?.includes('sauce'))))throw Error('Revisa las salsas sugeridas de la receta.')}
  for(const p of s.plan||[])for(const field of ['sauce','secondSauce'])if(p[field]&&!s.recipes.some(r=>r.id===p[field]&&r.roles?.includes('sauce')))throw Error('La salsa del menú no es válida.');
@@ -23,7 +23,7 @@ function clearNonVegetarianPlan(s,plan=s.plan){
  return changed;
 }
 function recipeExtraFields(r,recipes){return `<label>Autor/a<input name="author" maxlength="120" value="${esc(r.author||'')}" placeholder="Nombre de quien aporta la receta"></label><label>Receta vegetariana<select name="vegetarianUse">${Object.entries(VEGETARIAN_CHOICES).map(([key,label])=>`<option value="${key}" ${(r.vegetarianUse||'auto')===key?'selected':''}>${label}</option>`).join('')}</select><small>Incluye huevos y lácteos. Puedes corregir la detección.</small></label><fieldset class="full"><legend>Salsas sugeridas</legend><p class="muted">Opcionales: se comprará solo la salsa elegida en el menú.</p>${recipes.filter(x=>x.id!==r.id&&x.roles.includes('sauce')).map(x=>`<label><input type="checkbox" name="suggestedSauce" value="${x.id}" ${(r.sauces||[]).includes(x.id)?'checked':''}> ${esc(x.name)}</label>`).join('')||'<p>Añade una receta de tipo Salsa para poder sugerirla.</p>'}</fieldset>`}
-function recipeExtraDetails(r){return `<p class="muted">Autor/a: ${esc(r.author||'Sin indicar')} · ${isVegetarian(r)?'Apta para vegetarianos':'No apta para vegetarianos'}${r.vegetarianUse==='auto'?' (según ingredientes)':''}</p>${r.sauces?.length?'<h3>Salsas sugeridas</h3><ul>'+r.sauces.map(id=>state.recipes.find(x=>x.id===id)).filter(Boolean).map(x=>'<li>'+esc(x.name)+'</li>').join('')+'</ul>':''}`}
+function recipeExtraDetails(r){return `<p class="muted">${isVegetarian(r)?'Apta para vegetarianos':'No apta para vegetarianos'}${r.vegetarianUse==='auto'?' (según ingredientes)':''}</p>${r.sauces?.length?'<h3>Salsas sugeridas</h3><ul>'+r.sauces.map(id=>state.recipes.find(x=>x.id===id)).filter(Boolean).map(x=>'<li>'+esc(x.name)+'</li>').join('')+'</ul>':''}`}
 function sauceFieldForCourse(key){return key==='recipe'?'sauce':key==='second'?'secondSauce':null}
 function optionalSauceCard(p,index,r,usage,key='recipe'){
  const field=sauceFieldForCourse(key),sauce=state.recipes.find(x=>x.id===p[field]);

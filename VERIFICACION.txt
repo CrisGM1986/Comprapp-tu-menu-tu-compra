@@ -94,3 +94,19 @@ Prueba local: siete identificadores únicos, autoría, fotos existentes,
 clasificaciones, un corazón inicial, respeto de preferencias personales y
 eliminaciones, validación de copia, exportación/importación ZIP con las fotos,
 recursos sin conexión y sintaxis de los scripts. Sin publicación.
+
+COMPRAPP v23 — 31/10/2026
+Pruebas con scripts reales e interfaz simulada:
+- Filtro de autor junto a grupo, gustos, ocasión, dieta y air fryer; autores
+  deduplicados; controles plegados y conservación del estado al filtrar.
+- Tres vistas y preferencia de vista persistida sin alterar productos ocultos
+  ni marcas de compra; regla CSS de dos columnas en móvil comprobada.
+- Menú controlado de diez platos: preferir selecciona autor preferido y combinar
+  selecciona ocho de él y dos de otro. Fallback sin autor compatible o sin otros
+  aprobados; nunca incluye recetas sin corazón.
+- Guardado de ajustes, copia/restauración y rechazo de valores inválidos.
+- Sintaxis de scripts y existencia de todos los recursos de precarga offline.
+Se corrigieron rutas de siete fotos trasladadas de FOTOS/nuevas a FOTOS y se
+retiraron tres capturas inexistentes de la precarga; no se restauraron imágenes.
+Estas comprobaciones no son una prueba visual en navegador ni en móvil físico.
+No publicado.

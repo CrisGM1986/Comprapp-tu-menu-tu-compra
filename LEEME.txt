@@ -349,3 +349,12 @@ Siete recetas incorporadas con su foto y un corazón. La pizza de pavo se
 consideró repetida y no se añadió. Las cantidades son orientativas y pueden
 ajustarse desde el recetario. La tarta Pantera Rosa queda fuera del menú
 vegetariano porque los pastelitos comerciales llevan colorante E120.
+
+NOVEDADES v23
+Recetario: búsqueda por autor dentro de Filtros, plegados al entrar.
+Vista Imagen grande, Imagen mediana (dos columnas en móvil) o Detalle
+(lista compacta). La vista elegida se recuerda sin cambiar el menú ni la compra.
+Ajustes > Recetas de tus autores: elige autor preferido y priorizar o combinar.
+Combinar intenta elegir un plato principal de otro autor cada cinco, si hay
+opciones compatibles. Siempre se respetan corazones, dieta, tiempo y variedad.
+La preferencia no excluye otros autores y se aplica al generar o sustituir platos.
