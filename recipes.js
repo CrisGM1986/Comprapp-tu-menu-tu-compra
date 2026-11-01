@@ -13,7 +13,24 @@ const SEED_RAW=[
     "Dora el magro con el aceite. Añade cebolla y zanahoria troceadas y sofríe 8 minutos.\nIncorpora las patatas chascadas y el agua. Cocina tapado 30–35 minutos, hasta que carne y patata estén tiernas.",
     "",
     "assets/FOTOS/guiso-patatas-magro.png",
-    "r0"
+    "r0",
+  {
+      "course": "primero",
+      "mealTypes": [
+        "comida"
+      ],
+      "canBeAccompaniment": false,
+      "mainFoods": [
+        "cerdo",
+        "patata",
+        "verduras"
+      ],
+      "foodGroups": [
+        "Carne",
+        "Verdura"
+      ]
+    }
+
   ],
   [
     "Crema de calabaza",
@@ -31,7 +48,7 @@ const SEED_RAW=[
     "Carne",
     30,
     "🍖",
-    "lomo de cerdo|600|g|1;jamón cocido|120|g|1;queso|120|g|2;aceite de oliva|20|ml|4",
+    "lomo de cerdo|600|g|1;jamón cocido|120|g|1;queso en lonchas|120|g|2;aceite de oliva|20|ml|4",
     "Aplana los filetes de lomo, rellena con jamón y queso y enrolla; sujeta con palillos.\nDora con aceite y termina tapado a fuego suave 12–15 minutos, hasta cocinar el centro. Retira los palillos.",
     "",
     "assets/FOTOS/rollos-cinta-lomo-jamon-queso.png",
@@ -64,7 +81,7 @@ const SEED_RAW=[
     "Verdura",
     40,
     "🥦",
-    "coliflor|1000|g|0;leche|500|ml|2;harina|40|g|3;mantequilla|40|g|2;queso|80|g|2",
+    "coliflor|1000|g|0;leche|500|ml|2;harina|40|g|3;mantequilla|40|g|2;queso rallado|80|g|2",
     "Cuece la coliflor en ramilletes 12–15 minutos y escurre.\nFunde la mantequilla, rehoga la harina un minuto y añade la leche poco a poco removiendo. Cocina hasta espesar.\nCubre la coliflor con bechamel y queso. Gratina hasta dorar.",
     "",
     "assets/FOTOS/coliflor-bechamel.png",
@@ -79,14 +96,30 @@ const SEED_RAW=[
     "Sofríe cebolla y zanahoria picadas con el aceite.\nAñade patata en dados y agua. Cuece 10 minutos, incorpora arroz y cocina 18 minutos más.\nAñade los garbanzos escurridos en los últimos 5 minutos.",
     "",
     "assets/FOTOS/guiso-garbanzos-arroz-patatas.png",
-    "r6"
+    "r6",
+  {
+      "course": "primero",
+      "mealTypes": [
+        "comida"
+      ],
+      "canBeAccompaniment": false,
+      "mainFoods": [
+        "legumbres",
+        "patata",
+        "arroz"
+      ],
+      "foodGroups": [
+        "Legumbres"
+      ]
+    }
+
   ],
   [
     "Espaguetis con carbonara vegetariana champiñones",
     "Pasta",
     25,
     "🍝",
-    "espaguetis|320|g|3;champiñón|300|g|0;huevo|3|ud|2;queso|80|g|2;aceite de oliva|20|ml|4",
+    "espaguetis|320|g|3;champiñón|300|g|0;huevo|3|ud|2;queso crema|80|g|2;aceite de oliva|20|ml|4",
     "Cuece los espaguetis y reserva un vaso de agua de cocción. Saltea el champiñón con aceite.\nBate los huevos con queso. Mezcla la pasta y los champiñones con el huevo a fuego suave, removiendo y añadiendo agua de cocción hasta obtener una salsa cremosa y el huevo cocinado.",
     "",
     "assets/FOTOS/espaguetis-carbonara-vegetariana-champiñones.png",
@@ -97,11 +130,26 @@ const SEED_RAW=[
     "Carne",
     60,
     "🍝",
-    "placas de lasaña|250|g|3;carne picada|500|g|1;tomate triturado|500|g|4;zanahoria|150|g|0;cebolla|150|g|0;leche|500|ml|2;harina|40|g|3;mantequilla|40|g|2;queso|100|g|2;aceite de oliva|20|ml|4",
+    "placas de lasaña|250|g|3;carne picada de ternera|500|g|1;tomate triturado|500|g|4;zanahoria|150|g|0;cebolla|150|g|0;leche|500|ml|2;harina|40|g|3;mantequilla|40|g|2;queso rallado|100|g|2;aceite de oliva|20|ml|4",
     "Sofríe cebolla y zanahoria, añade la carne y dórala. Incorpora tomate y cocina 20 minutos.\nHaz bechamel con mantequilla, harina y leche. Prepara las placas según su envase.\nAlterna capas de pasta, boloñesa y bechamel. Cubre de queso y hornea a 180 °C unos 25–30 minutos.",
     "",
     "assets/FOTOS/lasana-bolonesa.jpeg",
-    "r8"
+    "r8",
+  {
+      "course": "primero",
+      "mealTypes": [
+        "comida"
+      ],
+      "canBeAccompaniment": false,
+      "mainFoods": [
+        "pasta",
+        "ternera",
+        "otros"
+      ],
+      "foodGroups": [
+        "Carne"
+      ]
+    }
   ],
   [
     "Albóndigas de merluza con patatas",
@@ -112,7 +160,22 @@ const SEED_RAW=[
     "Pica la merluza sin espinas, mezcla con huevo y pan rallado y forma albóndigas.\nSofríe cebolla, añade patata en dados y agua; cocina 15 minutos.\nIncorpora las albóndigas y cuece suavemente otros 10–12 minutos hasta cocinar su interior.",
     "",
     "assets/FOTOS/albondigas-merluza-patatas-taco.jpeg",
-    "r9"
+    "r9",
+  {
+      "course": "primero",
+      "mealTypes": [
+        "comida"
+      ],
+      "canBeAccompaniment": false,
+      "mainFoods": [
+        "pescado",
+        "patata"
+      ],
+      "foodGroups": [
+        "Pescado",
+        "Verdura"
+      ]
+    }
   ],
   [
     "Fajitas de pollo",
@@ -133,7 +196,7 @@ const SEED_RAW=[
     "Huevos",
     20,
     "🥪",
-    "pan de molde|8|ud|3;huevo|4|ud|2;pavo cocido|160|g|1;lechuga|120|g|0;queso|100|g|2",
+    "pan de molde|8|ud|3;huevo|4|ud|2;pavo cocido|160|g|1;lechuga|120|g|0;queso en lonchas|100|g|2",
     "Cuece los huevos 10 minutos desde que hierve el agua, enfría, pela y corta.\nLava y seca la lechuga. Monta los sándwiches con huevo, pavo, lechuga y queso.",
     "",
     "assets/FOTOS/sandwich-huevo-cocido-pavo-queso-lechuga.png",
@@ -144,7 +207,7 @@ const SEED_RAW=[
     "Huevos",
     20,
     "🍳",
-    "huevo|8|ud|2;espinaca|200|g|0;queso|100|g|2;aceite de oliva|20|ml|4",
+    "huevo|8|ud|2;espinaca|200|g|0;queso en lonchas|100|g|2;aceite de oliva|20|ml|4",
     "Saltea las espinacas con la mitad del aceite.\nPrepara cuatro tortillas de dos huevos, rellena con espinacas y queso y dobla. Termina de cuajar el huevo.",
     "",
     "assets/FOTOS/tortilla-francesa-rellena-pavo-queso.png",
@@ -210,7 +273,7 @@ const SEED_RAW=[
     "Verdura",
     45,
     "🥒",
-    "calabacín|1000|g|0;garbanzos cocidos|400|g|4;tomate triturado|250|g|4;cebolla|150|g|0;queso|100|g|2;aceite de oliva|25|ml|4",
+    "calabacín|1000|g|0;garbanzos cocidos|400|g|4;tomate triturado|250|g|4;cebolla|150|g|0;queso rallado|100|g|2;aceite de oliva|25|ml|4",
     "Parte los calabacines a lo largo y hornea 20 minutos a 190 °C. Retira parte de la pulpa.\nSofríe cebolla y pulpa con aceite; añade tomate y garbanzos y cocina 10 minutos.\nRellena los calabacines, cubre con queso y gratina.",
     "calabacin",
     "assets/FOTOS/calabacines-rellenos.jpeg",
@@ -254,7 +317,7 @@ const SEED_RAW=[
     "Carne",
     25,
     "🌭",
-    "pan de perrito|4|ud|3;carne picada|500|g|1;tomate|200|g|0;lechuga|100|g|0;queso|80|g|2;aceite de oliva|15|ml|4",
+    "pan de perrito|4|ud|3;carne picada de ternera|500|g|1;tomate|200|g|0;lechuga|100|g|0;queso rallado|80|g|2;aceite de oliva|15|ml|4",
     "Forma cuatro porciones alargadas de carne y aplánalas sobre la sartén caliente con aceite.\nCocina por ambos lados hasta hacer el centro. Abre los panes y rellena con carne, queso, tomate y lechuga lavada.",
     "perrito",
     "assets/FOTOS/perritos-carne-picada-aplastada.png",
@@ -281,8 +344,8 @@ const SEED_RAW=[
     "Carne",
     45,
     "🍗",
-    "pechuga de pollo|650|g|1;patata|900|g|0;huevo|2|ud|2;harina|70|g|3;pan rallado|130|g|3;aceite de oliva|350|ml|4",
-    "Pela las patatas, córtalas en bastones y sécalas bien. Fríelas en tandas hasta que estén doradas y escurre sobre papel de cocina.\nAplana ligeramente los filetes de pollo. Pásalos por harina, huevo batido y pan rallado.\nFríe el pollo en aceite caliente, por ambos lados, hasta que esté completamente cocinado por dentro. Sirve con las patatas recién hechas.",
+    "pechuga de pollo|650|g|1;patatas congeladas|700|g|0;huevo|2|ud|2;harina|70|g|3;pan rallado|130|g|3;aceite de oliva|350|ml|4",
+    "Fríe las patatas hasta que estén doradas22:07 31/10/2026.\nAplana ligeramente los filetes de pollo. Pásalos por harina, huevo batido y pan rallado.\nFríe el pollo en aceite caliente, por ambos lados, hasta que esté completamente cocinado por dentro. Sirve con las patatas recién hechas.",
     "",
     "assets/FOTOS/pollo-empanado-con-patatas-fritas.jpg",
     "r24"
@@ -336,11 +399,26 @@ const SEED_RAW=[
     "Pasta",
     45,
     "🍝",
-    "rigatoni|360|g|3;chorizo|200|g|1;champiñón|300|g|0;tomate triturado|400|g|4;cebolla|150|g|0;queso mozzarella|200|g|2;aceite de oliva|20|ml|4",
+    "rigatoni|360|g|3;chorizo|200|g|1;champiñón|300|g|0;tomate triturado|400|g|4;cebolla|150|g|0;queso rallado|200|g|2;aceite de oliva|20|ml|4",
     "Cuece los rigatoni en agua con sal uno o dos minutos menos de lo indicado en el paquete y escurre.\nSofríe la cebolla con el aceite; añade el chorizo en rodajas y los champiñones laminados. Incorpora el tomate y cocina unos 10 minutos.\nMezcla la pasta con la salsa, pasa a una fuente de horno y cubre con mozzarella. Hornea a 200 °C durante 10–15 minutos, hasta que el queso se funda y se gratine.",
     "",
     "assets/FOTOS/rigatoni-al-forno-chorizo-champinones.jpg",
-    "r29"
+    "r29",
+  {
+      "course": "primero",
+      "mealTypes": [
+        "comida"
+      ],
+      "canBeAccompaniment": false,
+      "mainFoods": [
+        "pasta",
+        "ternera"
+      ],
+      "foodGroups": [
+        "Carne",
+        "Pasta"
+      ]
+    }
   ],
   [
     "Croquetas de pollo",
@@ -351,7 +429,22 @@ const SEED_RAW=[
     "Pica finamente el pollo cocido y la cebolla. Sofríe la cebolla con la mantequilla y añade la harina; remueve unos dos minutos.\nVierte la leche poco a poco sin dejar de remover hasta obtener una bechamel muy espesa. Incorpora el pollo y cocina unos minutos más.\nExtiende la masa en una fuente, cubre a piel y enfría en la nevera al menos 4 horas (este reposo no está incluido en el tiempo estimado).\nForma las croquetas, pásalas por huevo batido y pan rallado y fríelas por tandas en aceite caliente hasta que estén doradas. Escurre antes de servir.",
     "",
     "assets/FOTOS/croquetas-pollo.jpg",
-    "r30"
+    "r30",
+  {
+      "course": "primero",
+      "mealTypes": [
+        "cena"
+      ],
+      "canBeAccompaniment": false,
+      "mainFoods": [
+        "pollo",
+        "otros"
+      ],
+      "foodGroups": [
+        "Carne"
+      ]
+    }
+
   ],
   [
     "Arroz a banda",
@@ -428,7 +521,24 @@ const SEED_RAW=[
     "Sofríe la cebolla y el ajo picados con aceite. Añade el chorizo en rodajas y rehoga un par de minutos.\nIncorpora el tomate y deja reducir 5 minutos. Retira brevemente del fuego y agrega el pimentón para evitar que se queme.\nAñade las alubias escurridas y el caldo. Cocina a fuego suave 15–20 minutos para integrar los sabores. Ajusta de sal y sirve caliente.",
     "",
     "assets/FOTOS/alubias-chorizo.jpeg",
-    "r37"
+    "r37",
+  {
+      "course": "primero",
+      "mealTypes": [
+        "comida"
+      ],
+      "canBeAccompaniment": false,
+      "mainFoods": [
+        "legumbres",
+        "patata",
+        "carne"
+      ],
+      "foodGroups": [
+        "Carne",
+        "Legumbres"
+      ]
+    }
+
   ],
   [
     "Arroz a la zamorana",
@@ -538,14 +648,27 @@ const SEED_RAW=[
     "Pela las patatas y córtalas en rodajas de 1 cm. Sálalas ligeramente, pásalas por harina y luego por huevo batido. Fríelas hasta que se doren por fuera y escúrrelas.\nPocha la cebolla y el ajo picados en una cazuela con un poco del aceite de fritura. Añade el caldo, el laurel y las patatas rebozadas.\nCuece a fuego suave 15–20 minutos, sin remover bruscamente, hasta que las patatas estén tiernas y la salsa ligada. Espolvorea con perejil. La fotografía muestra patatas rebozadas en salsa, más propias de esta preparación que de las patatas a lo pobre tradicionales.",
     "",
     "assets/FOTOS/patatas-pobre.jpeg",
-    "r47"
+    "r47",
+  {
+      "course": "primero",
+      "mealTypes": [
+        "comida"
+      ],
+      "canBeAccompaniment": false,
+      "mainFoods": [
+        "patata"
+      ],
+      "foodGroups": [
+        "Verdura"
+      ]
+    }
   ],
   [
     "Pizza de bacon, pollo y queso",
     "Otros",
     40,
     "🍕",
-    "base de pizza|2|ud|3;pechuga de pollo|250|g|1;bacon|160|g|1;tomate frito|180|g|4;queso mozzarella rallado|230|g|2;orégano|4|g|4;aceite de oliva|15|ml|4",
+    "base de pizza|2|ud|3;pollo en tiras|250|g|1;bacon|160|g|1;tomate frito|180|g|4;queso rallado|230|g|2;orégano|4|g|4;aceite de oliva|15|ml|4",
     "Precalienta el horno a 220 °C. Corta el pollo en tiras y saltéalo con aceite hasta que esté completamente cocinado. Dora ligeramente el bacon y reserva.\nExtiende las bases de pizza, reparte el tomate, el pollo, el bacon y el queso. Espolvorea con orégano.\nHornea 12–18 minutos, según el grosor de la masa, hasta que los bordes estén dorados y el queso se funda.",
     "",
     "assets/FOTOS/pizza-bacon-queso-pollotiras.jpeg",
@@ -556,7 +679,7 @@ const SEED_RAW=[
     "Otros",
     35,
     "🍕",
-    "base de pizza|2|ud|3;calabacín|350|g|0;tomate|350|g|0;jamón cocido|130|g|1;queso mozzarella|220|g|2;tomate triturado|150|g|4;aceite de oliva|20|ml|4;orégano|4|g|4",
+    "base de pizza|2|ud|3;calabacín|350|g|0;tomate|350|g|0;jamón cocido|130|g|1;queso rallado|220|g|2;tomate triturado|150|g|4;aceite de oliva|20|ml|4;orégano|4|g|4",
     "Precalienta el horno a 220 °C. Lava el calabacín y los tomates y córtalos en rodajas finas.\nColoca las bases sobre papel de horno. Extiende una capa fina de tomate triturado y añade jamón cocido, rodajas de calabacín y tomate, y mozzarella. Riega ligeramente con aceite y espolvorea con orégano.\nHornea 12–18 minutos hasta que la masa quede dorada y las verduras cocinadas.",
     "",
     "assets/FOTOS/pizza-calabacin-tomate.jpeg",
@@ -849,10 +972,9 @@ const SEED_RAW=[
     "assets/FOTOS/albondigas-ternera-patatas-ensalada.jpeg",
     "r69",
     {
-      "course": "segundo",
+      "course": "primero",
       "mealTypes": [
-        "comida",
-        "cena"
+        "comida"
       ],
       "canBeAccompaniment": false,
       "mainFoods": [
