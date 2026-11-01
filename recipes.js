@@ -1537,6 +1537,602 @@ const SEED_RAW=[
       ]
     }
   ]
+,
+  [
+    "Croquetas de calabacín y queso",
+    "Verdura",
+    45,
+    "🥒",
+    "Calabacín|400|g|0;Queso rallado|120|g|2;Leche|500|ml|2;Harina|70|g|4;Mantequilla|60|g|2;Huevos|2|ud|2;Pan rallado|120|g|3;Aceite de oliva|30|ml|4",
+    "Saltea el calabacín picado 8 min. Prepara una bechamel espesa con mantequilla, harina y leche en 10 min; mezcla el calabacín y el queso. Enfría la masa, forma croquetas y pásalas por huevo y pan rallado. Cocínalas en freidora de aire a 190 °C unos 12 min o fríelas hasta dorar.",
+    "",
+    "assets/FOTOS/croquetas-calabacin-queso-acuarela.jpg",
+    "comprapp-croquetas-calabacin-queso",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "yes",
+      "airFryerUse": "yes",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first",
+        "second"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "vegetables"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Berenjenas rellenas de atún, patata y queso",
+    "Pescado",
+    50,
+    "🍆",
+    "Berenjenas|2|ud|0;Atún en conserva|250|g|1;Patata|300|g|0;Cebolla|120|g|0;Queso rallado|120|g|2;Aceite de oliva|25|ml|4",
+    "Asa las berenjenas partidas 25 min y cuece la patata 15 min. Vacía las berenjenas y mezcla la pulpa con la patata, la cebolla pochada y el atún. Rellena, añade queso y gratina 8 min.",
+    "",
+    "assets/FOTOS/berenjenas-atun-patata-queso-acuarela.jpg",
+    "comprapp-berenjenas-atun-patata-queso",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "no",
+      "airFryerUse": "yes",
+      "menuRulesVersion": 1,
+      "roles": [
+        "second"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "vegetables",
+        "fish",
+        "potato"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Lasaña vegetal gratinada",
+    "Pasta",
+    65,
+    "🥬",
+    "Placas de lasaña|250|g|3;Champiñones|300|g|0;Espinacas|300|g|0;Zanahoria|200|g|0;Salsa de tomate|400|g|4;Leche|500|ml|2;Harina|40|g|4;Mantequilla|40|g|2;Queso rallado|100|g|2;Aceite de oliva|25|ml|4",
+    "Saltea los champiñones, las espinacas y la zanahoria 12 min. Prepara la bechamel con mantequilla, harina y leche en 10 min. Monta capas de pasta, verduras y tomate; cubre con bechamel y queso. Hornea 30 min hasta gratinar.",
+    "",
+    "assets/FOTOS/lasana-vegetal-acuarela.jpg",
+    "comprapp-lasana-vegetal",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "yes",
+      "airFryerUse": "yes",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first"
+      ],
+      "meals": [
+        "Comida"
+      ],
+      "mainFoods": [
+        "pasta",
+        "vegetables"
+      ],
+      "dayPreference": "weekend",
+      "occasions": [
+        "elaborate"
+      ],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Salteado de brócoli, tofu y arroz",
+    "Verdura",
+    30,
+    "🥦",
+    "Brócoli|500|g|0;Tofu|400|g|2;Arroz|280|g|3;Ajo|2|dientes|0;Salsa de soja|30|ml|4;Aceite de oliva|25|ml|4",
+    "Cuece el arroz 18 min. Cuece el brócoli 5 min y escúrrelo. Dora el tofu en dados con el ajo 6 min; añade el brócoli, la salsa de soja y el arroz y saltea 2 min.",
+    "",
+    "assets/FOTOS/brocoli-tofu-arroz-acuarela.jpg",
+    "comprapp-brocoli-tofu-arroz",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "yes",
+      "airFryerUse": "no",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "rice",
+        "vegetables",
+        "other"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Sándwich de huevos revueltos con queso",
+    "Huevos",
+    15,
+    "🥪",
+    "Pan de molde|8|rebanadas|3;Huevos|6|ud|2;Queso en lonchas|4|ud|2;Mantequilla|20|g|2",
+    "Cuaja los huevos revueltos en 5 min. Colócalos con el queso entre las rebanadas y tuesta los sándwiches 3 min por lado, hasta que funda el queso.",
+    "",
+    "assets/FOTOS/sandwich-huevos-revueltos-queso-acuarela.jpg",
+    "comprapp-sandwich-huevos-queso",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "yes",
+      "airFryerUse": "yes",
+      "menuRulesVersion": 1,
+      "roles": [
+        "second"
+      ],
+      "meals": [
+        "Cena"
+      ],
+      "mainFoods": [
+        "eggs"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Espinacas a la crema con picatostes",
+    "Verdura",
+    25,
+    "🥬",
+    "Espinacas|800|g|0;Nata para cocinar|200|ml|2;Cebolla|100|g|0;Pan|150|g|3;Mantequilla|25|g|2",
+    "Pocha la cebolla 5 min. Añade las espinacas y cocina 8 min; incorpora la nata y reduce 5 min. Tuesta el pan en dados y sírvelo encima.",
+    "",
+    "assets/FOTOS/espinacas-crema-picatostes-acuarela.jpg",
+    "comprapp-espinacas-crema-picatostes",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "yes",
+      "airFryerUse": "no",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "vegetables"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Espinacas con gambas y salsa de tomate",
+    "Pescado",
+    25,
+    "🍤",
+    "Espinacas|600|g|0;Gambas peladas|400|g|1;Salsa de tomate|300|g|4;Ajo|2|dientes|0;Aceite de oliva|25|ml|4",
+    "Saltea el ajo y las gambas 3 min. Añade las espinacas y cocina 6 min; incorpora el tomate y deja hervir suave 8 min.",
+    "",
+    "assets/FOTOS/espinacas-gambas-tomate-acuarela.jpg",
+    "comprapp-espinacas-gambas-tomate",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "no",
+      "airFryerUse": "no",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first",
+        "second"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "vegetables",
+        "seafood"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Fajitas de calabacín picado y queso",
+    "Verdura",
+    20,
+    "🌯",
+    "Tortillas de trigo|4|ud|3;Calabacín|500|g|0;Queso en lonchas|8|ud|2;Cebolla|120|g|0;Aceite de oliva|20|ml|4",
+    "Saltea la cebolla y el calabacín picado 10 min. Rellena las tortillas con el salteado y el queso. Ciérralas y dóralas 2 min por lado.",
+    "",
+    "assets/FOTOS/fajitas-calabacin-queso-acuarela.jpg",
+    "comprapp-fajitas-calabacin-queso",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "yes",
+      "airFryerUse": "yes",
+      "menuRulesVersion": 1,
+      "roles": [
+        "second"
+      ],
+      "meals": [
+        "Cena"
+      ],
+      "mainFoods": [
+        "vegetables"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Arroz blanco con tomate y huevo frito",
+    "Huevos",
+    30,
+    "🍳",
+    "Arroz|280|g|3;Huevos|4|ud|2;Tomate frito|300|g|4;Aceite de oliva|30|ml|4",
+    "Cuece el arroz 18 min. Calienta el tomate 5 min y fríe los huevos. Sirve el arroz con tomate y un huevo por persona.",
+    "",
+    "assets/FOTOS/arroz-blanco-tomate-huevo-acuarela.jpg",
+    "comprapp-arroz-tomate-huevo",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "yes",
+      "airFryerUse": "no",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first",
+        "second"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "rice",
+        "eggs"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Lentejas con zanahoria y patata",
+    "Legumbres",
+    45,
+    "🥕",
+    "Lentejas secas|320|g|4;Zanahoria|250|g|0;Patata|400|g|0;Cebolla|150|g|0;Caldo de verduras|1000|ml|4;Aceite de oliva|30|ml|4",
+    "Pocha la cebolla 5 min. Añade las lentejas, la zanahoria, la patata y el caldo; cuece unos 35 min, hasta que estén tiernas. Ajusta el caldo al gusto.",
+    "",
+    "assets/FOTOS/lentejas-zanahoria-patata-acuarela.jpg",
+    "comprapp-lentejas-zanahoria-patata",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "yes",
+      "airFryerUse": "no",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first"
+      ],
+      "meals": [
+        "Comida"
+      ],
+      "mainFoods": [
+        "legumes",
+        "potato",
+        "vegetables"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Quinoa salteada con calabacín y zanahoria",
+    "Verdura",
+    25,
+    "🥕",
+    "Quinoa|280|g|3;Calabacín|400|g|0;Zanahoria|250|g|0;Cebolla|100|g|0;Aceite de oliva|25|ml|4",
+    "Lava y cuece la quinoa 15 min. Saltea la cebolla, el calabacín y la zanahoria 10 min. Mezcla con la quinoa y cocina 2 min más.",
+    "",
+    "assets/FOTOS/quinoa-calabacin-zanahoria-acuarela.jpg",
+    "comprapp-quinoa-calabacin-zanahoria",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "yes",
+      "airFryerUse": "no",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "other",
+        "vegetables"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Salteado de champiñones con bacon",
+    "Carne",
+    20,
+    "🍄",
+    "Champiñones|600|g|0;Bacon|200|g|1;Ajo|2|dientes|0;Aceite de oliva|20|ml|4",
+    "Dora el bacon 5 min. Añade el ajo y los champiñones laminados; saltea 10 min, hasta que se evapore el agua.",
+    "",
+    "assets/FOTOS/champinones-bacon-acuarela.jpg",
+    "comprapp-champinones-bacon",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "no",
+      "airFryerUse": "no",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first",
+        "second"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "vegetables",
+        "pork"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Risotto de queso",
+    "Otros",
+    40,
+    "🧀",
+    "Arroz redondo|320|g|3;Queso curado|120|g|2;Caldo de verduras|1200|ml|4;Cebolla|100|g|0;Mantequilla|40|g|2;Aceite de oliva|20|ml|4",
+    "Pocha la cebolla 5 min y añade el arroz. Incorpora el caldo caliente poco a poco durante 18-20 min, removiendo. Apaga el fuego y mezcla el queso y la mantequilla.",
+    "",
+    "assets/FOTOS/risotto-queso-acuarela.jpg",
+    "comprapp-risotto-queso",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "yes",
+      "airFryerUse": "no",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "rice"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Espaguetis con gambas al ajillo",
+    "Pasta",
+    25,
+    "🍝",
+    "Espaguetis|320|g|3;Gambas peladas|400|g|1;Ajo|4|dientes|0;Aceite de oliva|35|ml|4;Perejil|15|g|0",
+    "Cuece los espaguetis 9 min. Dora el ajo laminado 2 min y saltea las gambas 3 min. Mezcla con la pasta y el perejil; añade un poco de agua de cocción si hace falta.",
+    "",
+    "assets/FOTOS/espaguetis-gambas-ajillo-acuarela.jpg",
+    "comprapp-espaguetis-gambas-ajillo",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "no",
+      "airFryerUse": "no",
+      "menuRulesVersion": 1,
+      "roles": [
+        "first"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "pasta",
+        "seafood"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Empanada de hojaldre con bacon, queso y pavo",
+    "Carne",
+    45,
+    "🥧",
+    "Hojaldre|2|láminas|3;Bacon|200|g|1;Queso|200|g|2;Pavo cocido|200|g|1;Huevo|1|ud|2",
+    "Extiende una lámina de hojaldre y reparte el bacon, el pavo y el queso. Cubre con la otra, cierra los bordes y pinta con huevo. Hornea a 200 °C unos 25 min, hasta dorar.",
+    "",
+    "assets/FOTOS/empanada-bacon-queso-pavo-acuarela.jpg",
+    "comprapp-empanada-bacon-queso-pavo",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "no",
+      "airFryerUse": "yes",
+      "menuRulesVersion": 1,
+      "roles": [
+        "second"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "pork",
+        "chicken"
+      ],
+      "dayPreference": "any",
+      "occasions": [
+        "picnic"
+      ],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Hot dog de salchicha",
+    "Carne",
+    15,
+    "🌭",
+    "Pan de perrito|4|ud|3;Salchichas de carne|4|ud|1;Kétchup|80|g|4;Mostaza|40|g|4",
+    "Calienta las salchichas 5 min en sartén o freidora de aire. Abre y tuesta ligeramente los panes. Monta los perritos y añade kétchup y mostaza al gusto.",
+    "",
+    "assets/FOTOS/hot-dog-salchicha-acuarela.jpg",
+    "comprapp-hot-dog-salchicha",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "no",
+      "airFryerUse": "yes",
+      "menuRulesVersion": 1,
+      "roles": [
+        "second"
+      ],
+      "meals": [
+        "Cena"
+      ],
+      "mainFoods": [
+        "pork"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ],
+  [
+    "Huevos rellenos de atún gratinados con bechamel",
+    "Huevos",
+    45,
+    "🥚",
+    "Huevos|8|ud|2;Atún en conserva|300|g|1;Leche|500|ml|2;Harina|40|g|4;Mantequilla|40|g|2;Queso rallado|80|g|2",
+    "Cuece los huevos 10 min y pártelos por la mitad. Mezcla las yemas con el atún y rellena las claras. Haz una bechamel con mantequilla, harina y leche en 10 min; cubre los huevos, añade queso y gratina 8 min.",
+    "",
+    "assets/FOTOS/huevos-atun-bechamel-acuarela.jpg",
+    "comprapp-huevos-atun-bechamel",
+    {
+      "author": "Comprapp",
+      "initialPreference": "normal",
+      "vegetarianUse": "no",
+      "airFryerUse": "yes",
+      "menuRulesVersion": 1,
+      "roles": [
+        "second"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "eggs",
+        "fish"
+      ],
+      "dayPreference": "any",
+      "occasions": [],
+      "specialOnly": false,
+      "accompaniments": [],
+      "sauces": [],
+      "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
+    }
+  ]
 ];
 const SEED=SEED_RAW.map((r,i)=>({id:r[8],name:r[0],group:r[1],minutes:r[2],emoji:r[3],servings:4,ingredients:r[4].split(';').map(x=>{const [name,qty,unit,aisle]=x.split('|');return {name,qty:+qty,unit,aisle:AISLES[+aisle]}}),steps:r[5].replace(/\\n/g,'\n'),capture:r[6]||'',photo:r[7]||'',source:r[7]?'Fotografía aportada. Elaboración casera orientativa.':i>=17?'Nombre tomado de las capturas. Elaboración casera propuesta.':'Plato del listado. Elaboración casera propuesta.',...(r[9]||{})}));
 const CAPTURES={arroz:['captura-arroz.png',351,220,58,107,85,89],calabacin:['captura-platos.png',387,619,76,32,85,57],sopa:['captura-platos.png',387,619,76,196,84,88],pure:['captura-platos.png',387,619,75,470,85,90],perrito:['captura-cenas.png',340,605,59,115,84,126],merluza:['captura-cenas.png',340,605,58,424,84,106]};
