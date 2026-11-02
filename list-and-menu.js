@@ -9,7 +9,7 @@ const alpha=(a,b)=>a.name.localeCompare(b.name,'es',{sensitivity:'base',numeric:
 const MERCADONA_PRICE_DATE='01/11/2026';
 const MERCADONA_SAMPLE={
  // Productos ya existentes en la selección original: conservar sus referencias.
- 'huevo|ud':{name:'Huevos medianos M · docena',size:12,unit:'ud',cents:285,url:'https://tienda.mercadona.es/product/31505/huevos-medianos-m-paquete'},
+ 'huevos|ud':{name:'Huevos medianos M · docena',size:12,unit:'ud',cents:285,url:'https://tienda.mercadona.es/product/31505/huevos-medianos-m-paquete'},
  'arroz|g':{name:'Arroz redondo Hacendado · 1 kg',size:1000,unit:'g',cents:115,url:'https://tienda.mercadona.es/product/5044/arroz-redondo-hacendado-paquete'},
  'leche|ml':{name:'Leche entera Hacendado · 1 l',size:1000,unit:'ml',cents:96,url:'https://tienda.mercadona.es/product/10380/leche-entera-hacendado-brick'},
  'garbanzos cocidos|g':{name:'Garbanzo cocido Hacendado · 400 g escurridos',size:400,unit:'g',cents:80,url:'https://tienda.mercadona.es/product/26029/garbanzo-cocido-hacendado-tarro'},
@@ -32,9 +32,9 @@ const MERCADONA_SAMPLE={
  'lechuga|g':{name:'Lechuga iceberg cortada y lavada · 250 g',size:250,unit:'g',cents:95,url:'https://cestabaja.es/es/product/lechuga-iceberg-cortada-y-lavada-69670/'},
  'chorizo|g':{name:'Chorizo dulce extra Hacendado · pieza 280 g',size:280,unit:'g',cents:249,url:'https://tienda.mercadona.es/product/54209/chorizo-dulce-extra-hacendado-pieza'},
  'lomo de cerdo|g':{name:'Filetes de lomo de cerdo familiar · bandeja (peso variable)',size:1000,unit:'g',cents:630,mode:'weight',url:'https://tienda.mercadona.es/product/3395/filetes-lomo-cerdo-familiar-bandeja'},
- 'pimiento rojo|g':{name:'Pimiento rojo · precio por kg',size:1000,unit:'g',cents:290,mode:'weight',url:'https://cestabaja.es/es/product/pimiento-rojo-69310/'},
+ 'pimientos|g':{name:'Pimiento rojo · precio por kg',size:1000,unit:'g',cents:290,mode:'weight',url:'https://cestabaja.es/es/product/pimiento-rojo-69310/'},
  'pimiento verde|g':{name:'Pimiento verde para freír · precio por kg',size:1000,unit:'g',cents:250,mode:'weight',url:'https://cestabaja.es/es/product/pimiento-verde-freir-69320/'},
- 'calabacín|g':{name:'Calabacín verde · pieza aprox. 420 g',size:420,unit:'g',cents:190,mode:'piece-weight',note:'Precio/kg y peso medio orientativos: se compra por piezas',url:'https://tienda.mercadona.es/product/69338/calabacin-verde-pieza'},
+ 'calabacin|g':{name:'Calabacín verde · pieza aprox. 420 g',size:420,unit:'g',cents:190,mode:'piece-weight',note:'Precio/kg y peso medio orientativos: se compra por piezas',url:'https://tienda.mercadona.es/product/69338/calabacin-verde-pieza'},
  'jamón serrano|g':{name:'Jamón serrano Incarlopsa lonchas · 240 g',size:240,unit:'g',cents:395,url:'https://cestabaja.es/es/product/jamon-serrano-incarlopsa-lonchas-59124/'},
  'queso fresco|g':{name:'Queso fresco de vaca Hacendado · 250 g',size:250,unit:'g',cents:160,url:'https://tienda.mercadona.es/product/51191/queso-fresco-vaca-hacendado-tarrina'},
  'chocolate negro|g':{name:'Chocolate negro para fundir Hacendado · 200 g',size:200,unit:'g',cents:225,url:'https://cestabaja.es/es/product/chocolate-negro-fundir-hacendado-12531/'},
@@ -44,14 +44,14 @@ const MERCADONA_SAMPLE={
  'levadura química|g':{name:'Impulsor gasificante repostería Hacendado · 90 g',size:90,unit:'g',cents:70,url:'https://cestabaja.es/es/product/impulsor-gasificante-reposteria-hacendado-para-uso-alimentario-80293/'},
  'levadura fresca|g':{name:'Levadura fresca Levital · 50 g',size:50,unit:'g',cents:50,url:'https://cestabaja.es/es/product/levadura-fresca-levital-87811/'},
  'pimentón dulce|g':{name:'Pimentón dulce Hacendado · 75 g',size:75,unit:'g',cents:130,url:'https://cestabaja.es/es/product/pimenton-dulce-hacendado-60573/'},
- 'champiñón|g':{name:'Champiñones blancos · bandeja 300 g',size:300,unit:'g',cents:156,url:'https://cestabaja.es/es/product/champinones-blancos-26951/'},
+ 'champinon|g':{name:'Champiñones blancos · bandeja 300 g',size:300,unit:'g',cents:156,url:'https://cestabaja.es/es/product/champinones-blancos-26951/'},
  'perejil|g':{name:'Perejil fresco troceado · paquete 40 g',size:40,unit:'g',cents:95,url:'https://cestabaja.es/es/product/perejil-troceado-lavado-69701/'},
  'bacon|g':{name:'Bacón Hacendado en cintas · 260 g',size:260,unit:'g',cents:195,url:'https://cestabaja.es/es/product/bacon-hacendado-cintas-16252/'},
 
  // Productos elegidos por el usuario en la tienda oficial de Mercadona (01/11/2026).
  'aguacate|ud':{name:'Aguacate · pieza (peso variable)',size:1,unit:'ud',cents:101,estimate:true,note:'Precio estimado por pieza: depende del peso real',url:'https://tienda.mercadona.es/product/3830/aguacate-pieza'},
  'calabaza|g':{name:'Calabaza cacahuete cortada · bandeja aprox. 520 g',size:520,unit:'g',cents:182,mode:'approx-pack',note:'Bandeja de peso variable; aproximación para estimar envases',url:'https://tienda.mercadona.es/product/3527/calabaza-cacahuete-cortada-trozos-bandeja'},
- 'espinaca|g':{name:'Espinacas cortadas y lavadas · 300 g',size:300,unit:'g',cents:130,url:'https://tienda.mercadona.es/product/69730/espinacas-cortadas-paquete'},
+ 'espinacas|g':{name:'Espinacas cortadas y lavadas · 300 g',size:300,unit:'g',cents:130,url:'https://tienda.mercadona.es/product/69730/espinacas-cortadas-paquete'},
  'guisantes|g':{name:'Guisante fino Hacendado ultracongelado · 1 kg',size:1000,unit:'g',cents:155,url:'https://tienda.mercadona.es/product/61215/guisante-fino-hacendado-ultracongelado-paquete'},
  'carne picada de ternera|g':{name:'Preparado de carne picada de vacuno · bandeja (peso variable)',size:1000,unit:'g',cents:null,mode:'weight',note:'Preparado de vacuno, no necesariamente carne picada 100 %',url:'https://tienda.mercadona.es/product/3454/preparado-carne-picada-vacuno-bandeja'},
  'costilla de cerdo|g':{name:'Costillas de cerdo carnosas a tacos · bandeja (peso variable)',size:1000,unit:'g',cents:800,mode:'weight',url:'https://tienda.mercadona.es/product/2811/costillas-cerdo-carnosas-tacos-bandeja'},
@@ -59,7 +59,8 @@ const MERCADONA_SAMPLE={
  'queso crema|g':{name:'Queso de untar suave de vaca Hacendado · 300 g',size:300,unit:'g',cents:140,url:'https://tienda.mercadona.es/product/51203/queso-untar-suave-vaca-hacendado-tarrina'},
  'bagel|ud':{name:'Pan Bagel Hacendado · paquete de 4 ud',size:4,unit:'ud',cents:142,url:'https://tienda.mercadona.es/product/23843/pan-bagel-hacendado-paquete'},
  'tortillas de trigo|ud':{name:'Tortillas de trigo Hacendado · paquete de 10 ud',size:10,unit:'ud',cents:115,url:'https://tienda.mercadona.es/product/80859/tortillas-trigo-hacendado-paquete'},
- 'pan cristal|ud':{name:'Panes cristal redondos cortados 100 % natural · 4 ud',size:4,unit:'ud',cents:null,note:'Producto disponible como referencia; ninguna receta actual solicita pan cristal',url:'https://tienda.mercadona.es/product/5850/4-panes-cristal-redondos-cortados-100-natural-pack-4'}
+ 'pollo en tiras|ud':{name:'Tiras de pechuga de pollo 99% Hacendado al natural',size:140,unit:'ud',cents:225,url:'https://tienda.mercadona.es/product/56661/tiras-pechuga-pollo-natural-hacendado-paquete'},
+ 'pan de hamburguesa|ud':{name:'Panes cristal redondos cortados 100 % natural · 4 ud',size:4,unit:'ud',cents:185,url:'https://tienda.mercadona.es/product/5850/4-panes-cristal-redondos-cortados-100-natural-pack-4'}
 };
 // Alias de ingrediente usado en algunas recetas: misma harina de trigo.
 MERCADONA_SAMPLE['harina|g']=MERCADONA_SAMPLE['harina de trigo|g'];
