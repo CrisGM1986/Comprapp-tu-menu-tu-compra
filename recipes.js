@@ -197,7 +197,7 @@ const SEED_RAW=[
     20,
     "🥪",
     "pan de molde|8|ud|3;huevos|4|ud|2;pavo cocido|160|g|1;lechuga|120|g|0;queso en lonchas|100|g|2",
-    "Cuece los huevos 10 minutos desde que hierve el agua, enfría, pela y corta.\nLava y seca la lechuga. Monta los sándwiches con huevo, pavo, lechuga y queso.",
+    "Cuece los huevos 15 minutos desde que hierve el agua, enfría, pela y corta.\nLava y seca la lechuga. Monta los sándwiches con huevo, pavo, lechuga y queso.",
     "",
     "assets/FOTOS/sandwich-huevo-cocido-pavo-queso-lechuga.png",
     "r11"
@@ -1160,7 +1160,7 @@ const SEED_RAW=[
 [
   "Caracolas a la boloñesa de ternera",
   "Pasta",
-  40,
+  25,
   "🍝",
   "pasta caracolas|320|g|3;carne picada de ternera|400|g|1;tomate triturado|400|g|4;cebolla|150|g|0;aceite de oliva|25|ml|4;sal|3|g|4",
   "Sofríe la cebolla picada con aceite durante 7–8 minutos. Añade la ternera picada y dórala 5–6 minutos.\nIncorpora el tomate y cocina a fuego suave 15–20 minutos. Ajusta de sal.\nMientras tanto, cuece las caracolas el tiempo del envase, normalmente 10–12 minutos. Escurre y mezcla con la salsa.",
@@ -1684,9 +1684,9 @@ const SEED_RAW=[
   [
     "Sándwich de huevos revueltos con queso",
     "Huevos",
-    15,
+    10,
     "🥪",
-    "Pan de molde|8|rebanadas|3;Huevos|6|ud|2;Queso en lonchas|4|ud|2;Mantequilla|20|g|2",
+    "Pan de molde (rebanadas)|8|ud|3;Huevos|6|ud|2;Queso en lonchas|4|ud|2;Mantequilla|20|g|2",
     "Cuaja los huevos revueltos en 5 min. Colócalos con el queso entre las rebanadas y tuesta los sándwiches 3 min por lado, hasta que funda el queso.",
     "",
     "assets/FOTOS/sandwich-huevos-revueltos-queso-acuarela.jpg",
@@ -2033,7 +2033,7 @@ const SEED_RAW=[
     "Carne",
     45,
     "🥧",
-    "Hojaldre|2|láminas|3;Bacon|200|g|1;Queso|200|g|2;Pavo cocido|200|g|1;huevos|1|ud|2",
+    "Hojaldre (láminas)|2|ud|3;Bacon|200|g|1;Queso|200|g|2;Pavo cocido|200|g|1;huevos|1|ud|2",
     "Extiende una lámina de hojaldre y reparte el bacon, el pavo y el queso. Cubre con la otra, cierra los bordes y pinta con huevo. Hornea a 200 °C unos 25 min, hasta dorar.",
     "",
     "assets/FOTOS/empanada-bacon-queso-pavo-acuarela.jpg",
@@ -2132,7 +2132,316 @@ const SEED_RAW=[
       "sauces": [],
       "source": "Receta orientativa propuesta por Comprapp. Ilustración generada con IA."
     }
+  ],
+  [
+    "Crema de calabacín y puerro con picatostes",
+    "Verdura",
+    35,
+    "🥣",
+    "calabacín|800|g|0;puerro|300|g|0;patata|250|g|0;caldo de verduras|700|ml|4;aceite de oliva|30|ml|4;pan|120|g|3;sal|3|g|4",
+    "Sofríe el puerro troceado 5 minutos. Añade el calabacín y la patata, cubre con caldo y cuece 20 minutos. Tritura hasta dejar una crema fina. Tuesta el pan en triángulos 5 minutos y sirve con unas tiras de calabacín salteadas.",
+    "",
+    "assets/FOTOS/crema-calabacin-puerro.jpeg",
+    "tere-crema-calabacin-puerro",
+    {
+      "author": "Tere",
+      "initialPreference": "favorite",
+      "vegetarianUse": "yes",
+      "menuRulesVersion": 1,
+      "servings": 4,
+      "sauces": [],
+      "accompaniments": [],
+      "canBeAccompaniment": false,
+      "specialOnly": false,
+      "dayPreference": "any",
+      "roles": [
+        "first"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "vegetables",
+        "potato"
+      ],
+      "airFryerUse": "no",
+      "occasions": [],
+      "special": "",
+      "source": "Fotografía aportada por Tere. Cantidades y tiempos orientativos; elaboración casera propuesta a partir de la fotografía."
+    }
+  ],
+  [
+    "Alcachofas con tacos de pavo",
+    "Verdura",
+    20,
+    "🌿",
+    "corazones de alcachofa cocidos|800|g|0;pavo cocido en tacos|250|g|1;ajo|2|ud|0;aceite de oliva|30|ml|4;limón|1|ud|0;tomates cherry|120|g|0;sal|2|g|4",
+    "Escurre bien las alcachofas. Dora los ajos picados 1 minuto, incorpora las alcachofas y saltea 5–7 minutos. Añade los tacos de pavo y cocina otros 3–4 minutos. Sirve con limón y tomate cherry.",
+    "",
+    "assets/FOTOS/alcachofas-tacos-pavo.jpeg",
+    "tere-alcachofas-tacos-pavo",
+    {
+      "author": "Tere",
+      "initialPreference": "favorite",
+      "vegetarianUse": "no",
+      "menuRulesVersion": 1,
+      "servings": 4,
+      "sauces": [],
+      "accompaniments": [],
+      "canBeAccompaniment": false,
+      "specialOnly": false,
+      "dayPreference": "any",
+      "roles": [
+        "first",
+        "second"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "vegetables",
+        "chicken"
+      ],
+      "airFryerUse": "no",
+      "occasions": [],
+      "special": "",
+      "source": "Fotografía aportada por Tere. Cantidades y tiempos orientativos; elaboración casera propuesta a partir de la fotografía."
+    }
+  ],
+  [
+    "Emulsión de patatas con pulpo",
+    "Pescado",
+    65,
+    "🐙",
+    "patata|500|g|0;pulpo cocido|400|g|1;nata para montar|200|ml|2;agua|1500|ml|4;laurel|2|ud|4;aceite de oliva|110|ml|4;pimentón dulce|8|g|4;pimentón picante|4|g|4;sal|3|g|4;pimienta negra|1|g|4",
+    "Hierve el agua con laurel y cuece las patatas troceadas 20 minutos. Escúrrelas y emulsiona con la nata, 30 ml de aceite, sal y pimienta hasta lograr una crema fina. Calienta los 80 ml de aceite restantes, retira del fuego y mezcla con los pimentones. Sirve la crema templada en vasitos, añade el pulpo cocido en rodajas y termina con el aceite de pimentón.",
+    "",
+    "assets/FOTOS/emulsion-patata-pulpo-navidad.jpeg",
+    "tito-emulsion-patata-pulpo",
+    {
+      "author": "Tito",
+      "initialPreference": "favorite",
+      "vegetarianUse": "no",
+      "menuRulesVersion": 1,
+      "servings": 12,
+      "sauces": [],
+      "accompaniments": [],
+      "canBeAccompaniment": false,
+      "specialOnly": false,
+      "dayPreference": "weekend",
+      "roles": [
+        "first"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "potato",
+        "seafood"
+      ],
+      "airFryerUse": "no",
+      "occasions": [
+        "christmas",
+        "elaborate"
+      ],
+      "special": "",
+      "source": "Receta de Velocidad Cuchara: https://www.velocidadcuchara.com/emulsion-patatas-pulpo-thermomix/. Fotografías aportadas por Tito. Ingredientes de la receta enlazada, pasos abreviados."
+    }
+  ],
+  [
+    "Tarta de queso estilo La Viña",
+    "Postres",
+    55,
+    "🍰",
+    "queso crema|1000|g|2;nata para montar|500|ml|2;huevos|6|ud|2;azúcar|350|g|4;harina de trigo|30|g|3",
+    "Precalienta el horno a 200 °C y forra un molde de 24 cm con papel humedecido. Mezcla todos los ingredientes 30 segundos hasta obtener una crema homogénea. Vierte en el molde y hornea a 200–210 °C durante 40–50 minutos, hasta dorar la superficie y dejar el centro ligeramente tembloroso. Deja templar con el horno entreabierto antes de desmoldar.",
+    "",
+    "assets/FOTOS/tarta-queso-estilo-la-vina.jpeg",
+    "tito-tarta-queso-la-vina",
+    {
+      "author": "Tito",
+      "initialPreference": "favorite",
+      "vegetarianUse": "yes",
+      "menuRulesVersion": 1,
+      "servings": 10,
+      "sauces": [],
+      "accompaniments": [],
+      "canBeAccompaniment": false,
+      "specialOnly": false,
+      "dayPreference": "weekend",
+      "roles": [
+        "dessert"
+      ],
+      "meals": [
+        "Comida",
+        "Cena"
+      ],
+      "mainFoods": [
+        "other"
+      ],
+      "airFryerUse": "no",
+      "occasions": [
+        "birthday",
+        "christmas",
+        "elaborate"
+      ],
+      "special": "",
+      "source": "Receta de Velocidad Cuchara: https://www.velocidadcuchara.com/tarta-de-queso-la-vina-thermomix/. Fotografía aportada por Tito. Ingredientes de la receta enlazada, pasos abreviados. El enfriamiento no se incluye en el tiempo de preparación."
+    }
+  ],
+  [
+    "Fideuá de gambas y sepia",
+    "Pasta",
+    40,
+    "🥘",
+    "fideos para fideuá|360|g|3;gambas peladas|350|g|1;sepia limpia|350|g|1;caldo de pescado|950|ml|4;pimiento rojo|150|g|0;pimiento verde|100|g|0;cebolla|150|g|0;ajo|2|ud|0;tomate triturado|180|g|4;aceite de oliva|35|ml|4;pimentón dulce|5|g|4",
+    "Dora la sepia troceada 4–5 minutos. Añade cebolla, ajo y pimientos picados y sofríe 8 minutos. Incorpora el tomate y cocina 5 minutos. Rehoga los fideos, añade pimentón y caldo caliente. Cuece según el tipo de fideo, unos 8–12 minutos. Agrega las gambas en los últimos 3–4 minutos y deja reposar antes de servir.",
+    "",
+    "assets/FOTOS/fideua-gambas-sepia.jpeg",
+    "tito-fideua-gambas-sepia",
+    {
+      "author": "Tito",
+      "initialPreference": "favorite",
+      "vegetarianUse": "no",
+      "menuRulesVersion": 1,
+      "servings": 4,
+      "sauces": [],
+      "accompaniments": [],
+      "canBeAccompaniment": false,
+      "specialOnly": false,
+      "dayPreference": "weekend",
+      "roles": [
+        "first"
+      ],
+      "meals": [
+        "Comida"
+      ],
+      "mainFoods": [
+        "pasta",
+        "seafood"
+      ],
+      "airFryerUse": "no",
+      "occasions": [
+        "elaborate"
+      ],
+      "special": "",
+      "source": "Fotografía aportada por Tito. Cantidades y tiempos orientativos; elaboración casera propuesta a partir de la fotografía."
+    }
   ]
+
+,
+[
+  "Tortilla francesa estilo pizza",
+  "Huevos",
+  12,
+  "🍳",
+  "huevos|8|ud|2;tomate frito|120|g|4;queso rallado|100|g|2;aceite de oliva|15|ml|4",
+  "Bate los huevos. Cuaja una tortilla abierta en sartén con el aceite, a fuego medio-bajo, 5–6 minutos.\nReparte el tomate frito y el queso por encima. Tapa y cocina 2–3 minutos más, hasta cuajar el huevo y fundir el queso.",
+  "",
+  "assets/FOTOS/Tortilla-francesa-estilo-pizza.jpeg",
+  "cris-tortilla-francesa-pizza",
+  {
+    "author": "Cris",
+    "initialPreference": "normal",
+    "occasions": [],
+    "specialOnly": false,
+    "dayPreference": "any",
+    "accompaniments": [],
+    "sauces": [],
+    "menuRulesVersion": 1,
+    "source": "Fotografía e ingredientes principales aportados por Cris. Cantidades para cuatro personas y tiempos orientativos.",
+    "roles": [
+      "first",
+      "second"
+    ],
+    "meals": [
+      "Comida",
+      "Cena"
+    ],
+    "mainFoods": [
+      "eggs"
+    ],
+    "vegetarianUse": "yes",
+    "airFryerUse": "yes",
+    "special": "Air fryer: usa un molde apto para cuajar el huevo a 180 °C unos 6–8 minutos. Añade tomate y queso y termina 2–3 minutos más, comprobando que el huevo esté cuajado."
+  }
+],
+[
+  "Sándwich de pavo, queso y huevo frito",
+  "Huevos",
+  10,
+  "🥪",
+  "pan de molde (rebanadas)|8|ud|3;pavo cocido|160|g|1;queso en lonchas|120|g|2;huevos|4|ud|2;aceite de oliva|20|ml|4",
+  "Tuesta el pan 1–2 minutos por cada lado.\nFríe los huevos 2–3 minutos, hasta cuajar la clara; trabaja en tandas si hace falta.\nMonta los sándwiches con pavo, queso y huevo frito. Calienta 1 minuto más para fundir el queso.",
+  "",
+  "assets/FOTOS/sanwich-huevo-pavo-queso.jpeg",
+  "cris-sandwich-pavo-queso-huevo-frito",
+  {
+    "author": "Cris",
+    "initialPreference": "normal",
+    "occasions": [],
+    "specialOnly": false,
+    "dayPreference": "any",
+    "accompaniments": [],
+    "sauces": [],
+    "menuRulesVersion": 1,
+    "source": "Fotografía e ingredientes principales aportados por Cris. Cantidades para cuatro personas y tiempos orientativos.",
+    "roles": [
+      "first"
+    ],
+    "meals": [
+      "Cena"
+    ],
+    "mainFoods": [
+      "eggs",
+      "chicken",
+      "other"
+    ],
+    "vegetarianUse": "no",
+    "airFryerUse": "no",
+    "special": "Puedes hacer un hueco en la rebanada superior para que asome el huevo."
+  }
+],
+[
+  "Medallones de salmón con espinacas y frutos secos",
+  "Pescado",
+  20,
+  "🐟",
+  "medallones de salmón preparados|700|g|1;espinacas|600|g|0;nueces|30|g|4;almendras laminadas|30|g|4;pasas|30|g|4;pipas de calabaza peladas|20|g|4;aceite de oliva|25|ml|4",
+  "Cocina los medallones en sartén con un poco de aceite, unos 4–5 minutos por lado o el tiempo indicado en el envase, hasta que estén hechos por dentro.\nMientras, saltea las espinacas 4–5 minutos. Añade nueces, almendras, pasas y pipas y cocina 1 minuto más.\nSirve los medallones con las espinacas.",
+  "",
+  "assets/FOTOS/salmon-medallones-espinacas-frutos-secos.jpeg",
+  "cris-medallones-salmon-espinacas-frutos-secos",
+  {
+    "author": "Cris",
+    "initialPreference": "normal",
+    "occasions": [],
+    "specialOnly": false,
+    "dayPreference": "any",
+    "accompaniments": [],
+    "sauces": [],
+    "menuRulesVersion": 1,
+    "source": "Fotografía e ingredientes principales aportados por Cris. Cantidades para cuatro personas y tiempos orientativos.",
+    "roles": [
+      "second"
+    ],
+    "meals": [
+      "Comida",
+      "Cena"
+    ],
+    "mainFoods": [
+      "fish",
+      "vegetables",
+      "other"
+    ],
+    "vegetarianUse": "no",
+    "airFryerUse": "yes",
+    "special": "Medallones comprados ya formados, según Cris. Para air fryer, sigue la temperatura y el tiempo del envase si contempla ese método; prepara las espinacas aparte en sartén."
+  }
+]
 ];
 const SEED=SEED_RAW.map((r,i)=>({id:r[8],name:r[0],group:r[1],minutes:r[2],emoji:r[3],servings:4,ingredients:r[4].split(';').map(x=>{const [name,qty,unit,aisle]=x.split('|');return {name,qty:+qty,unit,aisle:AISLES[+aisle]}}),steps:r[5].replace(/\\n/g,'\n'),capture:r[6]||'',photo:r[7]||'',source:r[7]?'Fotografía aportada. Elaboración casera orientativa.':i>=17?'Nombre tomado de las capturas. Elaboración casera propuesta.':'Plato del listado. Elaboración casera propuesta.',...(r[9]||{})}));
 const CAPTURES={arroz:['captura-arroz.png',351,220,58,107,85,89],calabacin:['captura-platos.png',387,619,76,32,85,57],sopa:['captura-platos.png',387,619,76,196,84,88],pure:['captura-platos.png',387,619,75,470,85,90],perrito:['captura-cenas.png',340,605,59,115,84,126],merluza:['captura-cenas.png',340,605,58,424,84,106]};

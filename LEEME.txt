@@ -369,3 +369,45 @@ Exportar mis recetas guarda fichas y relaciones, sin gustos, menú ni ajustes.
 Importar mis recetas añade sin sobrescribir y deja las recuperadas sin corazón.
 Las fotos propias incrustadas en las fichas se incluyen. La copia completa
 sigue siendo la opción para recuperar todos los datos del dispositivo.
+
+NOVEDADES v29 — VERSIONES RÁPIDAS
+El rayo amarillo sobre la imagen indica que existe una versión más rápida.
+Abre la receta para consultar qué cambia, el tiempo orientativo y las indicaciones
+para comprar. En los tres puntos del plato puedes cambiar entre original y rápida;
+la compra y la despensa usan los ingredientes de la versión seleccionada.
+En Ajustes, Aprovechar versiones rápidas se aplica al generar o sustituir platos.
+El límite de minutos cuenta entonces el tiempo rápido. El menú actual no cambia.
+El filtro del recetario permite buscar atajos o recetas hasta 20/30 minutos.
+En Editar receta > Versión rápida opcional puedes modificar o añadir la versión
+completa (ingredientes, tiempo, preparación y consejo de compra).
+Primeros atajos: albóndigas de ternera con patatas (30 min orientativos) y
+ensaladilla con verduras cocidas al natural (25 min, reposo adicional aparte).
+Las pizzas existentes ya usan base comprada: no se ha inventado un ahorro por ese paso.
+El rayo no certifica la calidad nutricional. Consulta ingredientes, sal y grasas
+saturadas en etiquetas y compara productos similares. Referencia de etiquetado:
+https://www.aesan.gob.es/seguridad-alimentaria/informacion-alimentaria/informacion-nutricional
+La página de cenas de Mercadona devolvió 403 y no se copiaron recetas de ella.
+
+NOVEDADES v30 — RECETAS DE CRIS
+Añadidas tortilla francesa estilo pizza (12 min), sándwich de pavo, queso y
+huevo frito (15 min), y medallones comprados de salmón con espinacas y frutos
+secos (20 min), con autoría Cris y un corazón inicial. Fotos originales localizadas
+en assets/FOTOS; no se duplicaron las recetas de huevo cocido o filetes rusos.
+Cantidades para cuatro y tiempos orientativos; en medallones preparados manda el envase.
+El rayo amarillo también aparece en recetas con menos de 10 minutos (10 exactos
+no cuenta). Es dinámico: se actualiza si cambias el tiempo. Se conservan los atajos
+y se puede filtrar por recetas rápidas o con atajo, y por menos de 10 minutos.
+
+NOVEDADES v31 — RÁPIDAS Y AÑADIR A MI SEMANA
+Receta rápida: 10 minutos o menos, incluidos los 10 exactos. El filtro muestra
+una sola opción, Rápidas o con atajo, además de Todas las recetas.
+Atajos nuevos: alubias blancas con chorizo (20 min orientativos) y lentejas
+con zanahoria/patata (30 min). Las alubias ya eran cocidas; se abrevia la
+preparación, sin atribuir al tarro un ahorro de cocción que ya existía.
+Las lentejas pasan de 320 g secas a unos 800 g cocidas/escurridas para cuatro.
+La ficha rápida enlaza los tarros indicados por el usuario; comprueba peso
+escurrido en su etiqueta. No se han supuesto tamaño de tarro, precio o stock.
+Cada tarjeta tiene Añadir a mi semana. Elige día, comida/cena y plato; verás
+qué receta se sustituye antes de confirmar. Puede elegirse versión rápida.
+Se mantienen dieta, exclusiones y tiempo; los avisos de repetición no bloquean.
+Una elección manual no cambia corazones. Si el menú está vacío, genera uno antes.

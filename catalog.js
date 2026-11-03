@@ -1,8 +1,8 @@
 /* Additive, field-aware catalog updates. Existing user records are authoritative. */
-const CATALOG_FIELDS=['name','author','vegetarianUse','sauces','group','minutes','emoji','servings','ingredients','steps','capture','photo','seasonalPhotos','source','roles','special','accompaniments','occasions','specialOnly','meals','mainFoods','dayPreference','airFryerUse','menuRulesVersion'];
+const CATALOG_FIELDS=['name','quickVariant','author','vegetarianUse','sauces','group','minutes','emoji','servings','ingredients','steps','capture','photo','seasonalPhotos','source','roles','special','accompaniments','occasions','specialOnly','meals','mainFoods','dayPreference','airFryerUse','menuRulesVersion'];
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 function catalogRecipe(r){return {...occasionDefaults(structuredClone(r)),roles:r.roles||['first','second'],special:r.special||'',accompaniments:r.accompaniments||[r.group==='Verdura'?'extra-bread':'extra-salad']}}
-function officialCatalog(){const fallback=typeof BASE_CATALOG_COMPLETE!=='undefined'&&BASE_CATALOG_COMPLETE?[]:[...extras(),...basicSauces()].map(occasionDefaults);const records=[...new Map([...fallback,...SEED.map(catalogRecipe)].map(r=>[r.id,r])).values()];const ready=normalizeMenuRules({recipes:records}).recipes;applyDefaultDessertIllustrations(ready);return ready}
+function officialCatalog(){const fallback=typeof BASE_CATALOG_COMPLETE!=='undefined'&&BASE_CATALOG_COMPLETE?[]:[...extras(),...basicSauces()].map(occasionDefaults);const records=[...new Map([...fallback,...SEED.map(catalogRecipe)].map(r=>[r.id,r])).values()];const ready=normalizeMenuRules({recipes:records}).recipes;applyDefaultDessertIllustrations(ready);applyQuickDefaults(ready);return ready}
 function catalogRevision(records){const text=JSON.stringify(records);let hash=2166136261;for(let i=0;i<text.length;i++)hash=Math.imul(hash^text.charCodeAt(i),16777619);return 'catalog-1-'+(hash>>>0).toString(16)}
 function mergeCatalog(input,incoming=officialCatalog()){
  const s=structuredClone(input),officialIds=new Set(incoming.map(r=>r.id));

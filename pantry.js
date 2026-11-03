@@ -6,7 +6,7 @@ function pantryPlanUsage(s){
  const available=pantryInventory(s),slots=new Map(),totals=new Map(),recipes=new Map(s.recipes.map(r=>[r.id,r]));
  const ordered=s.plan.map((p,index)=>({p,index})).sort((a,b)=>a.p.date.localeCompare(b.p.date)||(a.p.meal===b.p.meal?0:a.p.meal==='Comida'?-1:1)||a.index-b.index);
  for(const {p,index}of ordered)for(const key of shoppingKeys(s,p)){
-  const recipe=recipes.get(p[key]);if(!recipe)continue;const items=[];
+  const recipe=recipeForSlot(s,p,key);if(!recipe)continue;const items=[];
   for(const [ingredient,qty]of pantryUse(recipe,s,available).used){if(qty<=1e-9)continue;available.set(ingredient,Math.max(0,(available.get(ingredient)||0)-qty));totals.set(ingredient,(totals.get(ingredient)||0)+qty);const split=ingredient.lastIndexOf('|');items.push({key:ingredient,name:ingredient.slice(0,split),unit:ingredient.slice(split+1),qty})}
   if(items.length)slots.set(index+':'+key,items);
  }return {slots,totals};

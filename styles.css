@@ -107,3 +107,6 @@ body{background:#f7f8f5}header{background:white}nav button{display:flex;align-it
  .shopping .own-product>label{flex:1 1 calc(100% - 104px)}
  .shopping .own-product>.shop-amount,.shopping .own-product>.shop-price{flex:0 0 auto}
 }
+.photo .quick-badge{position:absolute;left:7px;bottom:7px;width:32px;height:34px;padding:4px;display:flex;align-items:center;justify-content:center;border-radius:8px;border:1px solid #e1c345;background:#fff9d7;pointer-events:none;z-index:2}.quick-badge svg{width:24px;height:26px;fill:#ffc400;stroke:#876900;stroke-width:1.2}.quick-detail h3{margin-top:0}.quick-detail p{font-size:14px}.quick-detail .muted{font-size:12px}.recipe-fields details label{margin:10px 0}
+@media(max-width:760px){.mobile-grid .photo .quick-badge{width:25px;height:28px;left:4px;bottom:4px;padding:3px}.mobile-grid .quick-badge svg{width:19px;height:22px}}
+.recipe-grid .actions .add-to-week{flex-basis:100%;min-height:44px;font-size:12px;background:var(--mint);border-color:transparent;padding:7px 10px}.recipe-grid.view-detail .actions .add-to-week{flex-basis:auto}#add-week-form>label{margin-bottom:14px}#add-week-form select{font-size:14px;width:100%}#week-replacement-warning{font-size:14px}

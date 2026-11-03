@@ -7,7 +7,7 @@ function isVegetarian(recipe){
  return !/\b(carne|pollo|pavo|ternera|cerdo|cordero|conejo|pato|buey|jamon|bacon|beicon|panceta|chorizo|chistorra|butifarra|longaniza|embutido\w*|salchich\w*|sobrasada|morcilla|fuet|salchichon|lomo|costilla\w*|solomillo|secreto iberico|pescado|atun|bonito|salmon|merluza|bacalao|sardina\w*|anchoa\w*|boqueron\w*|caballa|dorada|lubina|rape|trucha|lenguado|marisco|gamba\w*|langostino\w*|camaron\w*|mejillon\w*|almeja\w*|berberecho\w*|calamar\w*|sepia|pulpo|chipiron\w*|surimi|cangrejo|ostra\w*|vieira\w*|gelatina|manteca|grasa animal|worcestershire|salsa perrins|salsa de pescado|salsa de ostras|caldo de carne|caldo de pollo|caldo de pescado)\b/.test(ingredients)&&!['Carne','Pescado'].includes(recipe.group);
 }
 function normalizeRecipeExtras(s){
- for(const r of s.recipes){r.author??='Tere';r.vegetarianUse??='auto';r.sauces??=(r.group==='Carne'||/albondiga/.test(norm(r.name)))?['sauce-tomato','sauce-mushroom','sauce-pepper'].filter(id=>s.recipes.some(x=>x.id===id&&x.roles?.includes('sauce'))):[]}
+ for(const r of s.recipes){for(const i of r.ingredients||[])if(['rebanadas','láminas'].includes(i.unit)){i.name+=' ('+i.unit+')';i.unit='ud'}r.author??='Tere';r.vegetarianUse??='auto';r.sauces??=(r.group==='Carne'||/albondiga/.test(norm(r.name)))?['sauce-tomato','sauce-mushroom','sauce-pepper'].filter(id=>s.recipes.some(x=>x.id===id&&x.roles?.includes('sauce'))):[]}
  for(const p of s.plan||[]){p.sauce??='';p.secondSauce??=''}
  if(s.settings){s.settings.vegetarian??=false;s.settings.preferredAuthor??='';s.settings.authorMix??='mix'}
  return s;
@@ -19,7 +19,7 @@ function validateRecipeExtras(s){validateAuthorSettings(s);
 }
 function clearNonVegetarianPlan(s,plan=s.plan){
  if(!s.settings.vegetarian)return false;let changed=false;
- for(const p of plan)for(const key of shoppingKeys(s,p)){const r=s.recipes.find(r=>r.id===p[key]);if(r&&!isVegetarian(r)){p[key]='';const sauceField=sauceFieldForCourse(key);if(sauceField)p[sauceField]='';if(key==='accompaniment')p.accompanimentChosen=false;changed=true}}
+ for(const p of plan)for(const key of shoppingKeys(s,p)){const r=recipeForSlot(s,p,key);if(r&&!isVegetarian(r)){p[key]='';const sauceField=sauceFieldForCourse(key);if(sauceField)p[sauceField]='';if(key==='accompaniment')p.accompanimentChosen=false;changed=true}}
  return changed;
 }
 function recipeExtraFields(r,recipes){return `<label>Autor/a<input name="author" maxlength="120" value="${esc(r.author||'')}" placeholder="Nombre de quien aporta la receta"></label><label>Receta vegetariana<select name="vegetarianUse">${Object.entries(VEGETARIAN_CHOICES).map(([key,label])=>`<option value="${key}" ${(r.vegetarianUse||'auto')===key?'selected':''}>${label}</option>`).join('')}</select><small>Incluye huevos y lácteos. Puedes corregir la detección.</small></label><fieldset class="full"><legend>Salsas sugeridas</legend><p class="muted">Opcionales: se comprará solo la salsa elegida en el menú.</p>${recipes.filter(x=>x.id!==r.id&&x.roles.includes('sauce')).map(x=>`<label><input type="checkbox" name="suggestedSauce" value="${x.id}" ${(r.sauces||[]).includes(x.id)?'checked':''}> ${esc(x.name)}</label>`).join('')||'<p>Añade una receta de tipo Salsa para poder sugerirla.</p>'}</fieldset>`}
@@ -34,7 +34,7 @@ function chooseSauce(index,key='recipe'){
  const field=sauceFieldForCourse(key),p=state.plan[index],main=state.recipes.find(r=>r.id===p[key]),choices=state.recipes.filter(r=>r.roles.includes('sauce')&&eligible(r,state.settings,true));
  choices.sort((a,b)=>Number((main?.sauces||[]).includes(b.id))-Number((main?.sauces||[]).includes(a.id))||alpha(a,b));
  $('#dialog').innerHTML=`<button class="close" data-close aria-label="Cerrar">✕</button><h2>Elegir salsa</h2><p>Se añadirá a la compra con las raciones de tu menú.</p><form id="sauce-form"><label>Salsa<select id="sauce-choice"><option value="">Sin salsa</option>${choices.map(r=>`<option value="${r.id}" ${p[field]===r.id?'selected':''}>${esc(r.name)}${(main?.sauces||[]).includes(r.id)?' · Sugerida':''}</option>`).join('')}</select></label>${choices.length?'':'<p>Marca con un corazón alguna salsa compatible en el recetario.</p>'}<button class="primary">Guardar salsa</button></form>`;
- $('#dialog').showModal();bindDialog();$('#sauce-form').onsubmit=async e=>{e.preventDefault();const id=$('#sauce-choice').value;if(id&&!choices.some(r=>r.id===id))return;await commit(s=>{s.plan[index][field]=id;s.checked={}},'Salsa actualizada');$('#dialog').close()};
+ $('#dialog').showModal();bindDialog();$('#sauce-form').onsubmit=async e=>{e.preventDefault();const id=$('#sauce-choice').value;if(id&&!choices.some(r=>r.id===id))return;await commit(s=>{s.plan[index][field]=id;assignRecipeQuick(s.plan[index],field,s.recipes.find(r=>r.id===id),s.settings);s.checked={}},'Salsa actualizada');$('#dialog').close()};
 }
 function bindSauces(){document.querySelectorAll('[data-add-sauce]').forEach(b=>b.onclick=()=>chooseSauce(+b.dataset.addSauce));document.querySelectorAll('[data-options="sauce"],[data-options="secondSauce"]').forEach(b=>b.onclick=()=>chooseSauce(+b.dataset.index,b.dataset.options==='secondSauce'?'second':'recipe'))}
 function basicSauces(){

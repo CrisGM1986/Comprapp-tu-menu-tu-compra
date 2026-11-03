@@ -32,7 +32,7 @@ function replaceLocalData(next,draft){return new Promise((resolve,reject)=>{
 function resetLocalPreferences(){
  const pending=Promise.all([saving.catch(()=>{}),baseSaving.catch(()=>{})]);
  const job=pending.then(async()=>{const next=mergeCatalog(upgradePeriod(migrate(initial()))).state;upgradeDessertSchedule(next);const draft=freshBase();await replaceLocalData(next,draft);
-  state=next;baseDraft=draft;search='';filter='';occasionFilter='';preferenceFilter='';airFryerFilter='';vegetarianFilter='';recipeAuthorFilter='';recipeFiltersOpen=false;selectedDay='';managerSelected.clear();managerScope='personal';managerPage=0;managerQuery='';managerGroup='';managerMeal='';managerDays='';managerAirFryer='';
+  state=next;baseDraft=draft;search='';filter='';occasionFilter='';preferenceFilter='';airFryerFilter='';vegetarianFilter='';recipeAuthorFilter='';recipeFiltersOpen=false;quickRecipeFilter='';selectedDay='';managerSelected.clear();managerScope='personal';managerPage=0;managerQuery='';managerGroup='';managerMeal='';managerDays='';managerAirFryer='';
  });
  saving=job;baseSaving=job.catch(()=>{});return job;
 }

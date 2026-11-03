@@ -122,3 +122,49 @@ Verificación con base de datos y pantalla simuladas, sin acceder a IndexedDB re
   fichas iguales; una colisión con cambios crea otra receta sin sobrescribirla.
 - Sintaxis y recursos offline comprobados. No se ha restablecido la cocina real.
 Sin validación en móvil físico. No publicado.
+
+COMPRAPP v29 — 03/11/2026
+Pruebas con scripts reales e interfaz/base de datos simuladas:
+- Atajos completos para albóndigas y ensaladilla; tiempo menor y validación de
+  ingredientes, pasos y consejos. Atajos desactivados por el usuario se conservan.
+- Compra sin carne picada/huevo/pan rallado cuando se compran albóndigas formadas;
+  patatas en conserva diferenciadas de patatas crudas. Descuento de stock preparado.
+- Cambios original/rápida guardados en cada hueco; tiempo y receta de detalle
+  coherentes. Intercambio conserva la versión y los filtros de dieta/tiempo.
+- Generación con límite de 30 min permite la versión de albóndigas, no la original
+  de 45; el modo vegetariano la excluye. Ajustes no cambian versiones ya elegidas.
+- Filtros de 20/30 minutos; lectura de formulario, copias y exportación de catálogo
+  con variantes. Una variante cuya receta original cambia requiere revisión.
+- Corregidas dos unidades antiguas (rebanadas/láminas) a ud con descripción
+  conservada en el nombre; migración de esos registros para validar copias.
+- Sintaxis de los scripts y existencia de recursos offline comprobadas.
+Sin comprobación visual en navegador, móvil físico ni tiempos cocinando. No publicado.
+
+COMPRAPP v30 — 03/11/2026
+Inspección de las tres fotos existentes en FOTOS y comparación de nombres,
+ingredientes y preparaciones del catálogo. Usuario confirma medallones comprados
+ya formados; distintos de los filetes rusos caseros. No se modificaron las fotos.
+Pruebas con interfaz simulada: tres IDs y nombres únicos de Cris, corazón inicial,
+roles sin postre/acompañamiento, dieta, ocasión, air fryer y <=3 alimentos principales.
+Ingredientes y pasos breves con tiempos; autoría y gustos individuales previos
+conservados al fusionar. ZIP real con tres fotos, autores y preferencia inicial.
+Marca de rapidez para cinco recetas de menos de 10 min; fronteras 9/10/11
+comprobadas. Atajos existentes y filtros diferenciados conservados.
+Sintaxis y existencia de todos los recursos offline comprobadas.
+Sin comprobación en móvil físico ni medición de tiempos cocinando. No publicado.
+
+COMPRAPP v31 — 03/11/2026
+Pruebas con scripts reales e interfaz simulada:
+- Rayo para 1/9/10 min y sin rayo natural para 11 min. Filtro con solo dos
+  opciones: todas y rápidas o con atajo. Atajos anteriores conservados.
+- Dos variantes de legumbres, enlaces permitidos y rechazo de URL peligrosa;
+  pesos cocidos/escurridos en compra y resta correcta de despensa.
+- Botón en cada tarjeta. Abrir el selector no cambia el menú; el aviso nombra
+  el plato existente y confirmar actualiza el hueco con guardado.
+- Dieta y tiempo respetados; versión rápida admite un hueco de 20 min donde
+  no entra la original. Corazones sin cambios; sustitución obsoleta rechazada.
+- Menú vacío informa y ofrece ir a generar; exportación conserva enlaces.
+- Sintaxis de todos los scripts y recursos offline comprobados.
+Las páginas de producto consultadas requieren JavaScript y no aportaron pesos
+o información nutricional legible; no se inventaron esos datos.
+Sin prueba visual en móvil físico ni prueba cocinando. No publicado.

@@ -3,6 +3,7 @@ function settingsScreen(){
  return hero('A TU RITMO','Ajustes de tu menú.','Elige cuántos sois, qué días planificar y cuánto tiempo quieres cocinar.')+`<div class="settings settings-page"><form id="settingsForm"><div class="fields">
  <label>Comensales<input name="people" type="number" min="1" max="30" value="${s.people}" required></label>
  <label class="full"><span><input name="vegetarian" type="checkbox" ${s.vegetarian?'checked':''}> Menú vegetariano</span><small>Sin carne ni pescado. Puede incluir huevos y lácteos.</small></label>
+ <label class="full"><span><input type="checkbox" name="useQuick" ${s.useQuick?'checked':''}> Aprovechar versiones rápidas ⚡</span><small>Al generar o sustituir platos se usarán los atajos revisados. El tiempo máximo cuenta la versión rápida. El menú actual se mantiene.</small></label>
  ${authorSettingsFields(s)}
  ${durationFields(s)}
  <label>Tiempo máximo entre semana (min)<input name="minutes" type="number" min="10" max="300" value="${s.maxMinutes}" required></label>
@@ -17,7 +18,7 @@ function settingsScreen(){
  <section><h2>Copia de seguridad</h2><p>Guarda recetas, fotos, menú, despensa y compra para recuperarlos o llevarlos a otro dispositivo.</p><div class="actions"><button type="button" id="export">Descargar copia</button><label class="button">Restaurar copia<input id="import" type="file" accept="application/json,.json" hidden></label></div><p class="muted">Restaurar sustituye los datos actuales tras confirmarlo. Los datos están guardados en este navegador.</p></section>
  ${localDataSettings()}
  ${catalogSettings()}
- <section><h2>Actualización</h2><p>Comprapp v25 · <span id="screen-info"></span></p><button type="button" id="refresh-app">Comprobar actualización</button><p class="muted">Los cambios de la aplicación conservan tu cocina si mantienes la misma dirección y navegador.</p></section>
+ <section><h2>Actualización</h2><p>Comprapp v31 · <span id="screen-info"></span></p><button type="button" id="refresh-app">Comprobar actualización</button><p class="muted">Los cambios de la aplicación conservan tu cocina si mantienes la misma dirección y navegador.</p></section>
  <details><summary>Sobre el recetario</summary><p class="muted">${SEED.length} recetas del catálogo y propuestas editables de acompañamientos y postres. Las elaboraciones son orientativas y puedes adaptarlas en el recetario.</p></details>
  </details></div>`;
 }
@@ -25,7 +26,7 @@ function saveMenuSettings(form){
  const f=new FormData(form);
  return commit(s=>{
   const previous=structuredClone(s.settings),weeks=Number(f.get('weeks')),includeWeekends=f.get('calendarDays')==='7';
-  Object.assign(s.settings,{people:Number(f.get('people')),maxMinutes:Number(f.get('minutes')),weekendMinutes:Number(f.get('weekendMinutes')),exclude:String(f.get('exclude')||''),optimize:f.has('optimize'),vegetarian:f.has('vegetarian'),preferredAuthor:String(f.get('preferredAuthor')||'').trim(),authorMix:String(f.get('authorMix')||'mix')});
+  Object.assign(s.settings,{people:Number(f.get('people')),maxMinutes:Number(f.get('minutes')),weekendMinutes:Number(f.get('weekendMinutes')),exclude:String(f.get('exclude')||''),optimize:f.has('optimize'),vegetarian:f.has('vegetarian'),useQuick:f.has('useQuick'),preferredAuthor:String(f.get('preferredAuthor')||'').trim(),authorMix:String(f.get('authorMix')||'mix')});
   validateAuthorSettings(s);
   if(!Number.isInteger(s.settings.people)||s.settings.people<1||s.settings.people>30||![s.settings.maxMinutes,s.settings.weekendMinutes].every(n=>Number.isFinite(n)&&n>=10&&n<=300))throw Error('Revisa comensales y tiempos de cocina.');
   let addedCourse=false;
