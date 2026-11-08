@@ -6,7 +6,43 @@ function menuView(){const dates=days(state.settings.start,state.settings.weeks||
 html+=mobileCalendar(dates,pantryUsage);
 html+='<div class="desktop-calendar">';for(let w=0;w<(state.settings.weeks||2);w++){const count=state.settings.includeWeekends?7:5,week=dates.slice(w*count,w*count+count);html+=`<div class="desktop-week-scroll"><table class="menu-table ${state.settings.includeWeekends?'full-week':''}"><caption>Semana ${w+1}<span>${week[0].toLocaleDateString('es',{day:'numeric',month:'short'})} — ${week[week.length-1].toLocaleDateString('es',{day:'numeric',month:'short'})}</span></caption><colgroup><col class="label-col"><col span="${week.length}"></colgroup><thead><tr><th scope="col">Tu menú</th>${week.map(d=>`<th scope="col">${d.toLocaleDateString('es',{weekday:'long'})}<small>${d.toLocaleDateString('es',{day:'numeric',month:'short'})}</small></th>`).join('')}</tr></thead>`;for(const meal of ['Comida','Cena']){html+=`<tbody><tr class="meal-band"><th colspan="${week.length+1}" scope="rowgroup">${meal}</th></tr>`;for(const key of activeKeys(state,{meal})){html+=`<tr class="course-row" data-meal-row="${meal}-${key}"><th scope="row">${COURSES[key]}</th>${week.map(d=>{const index=state.plan.findIndex(p=>p.date===dateISO(d)&&p.meal===meal),p=state.plan[index];return `<td>${p?courseCard(p,index,key,false,pantryUsage):'Sin planificar'}</td>`}).join('')}</tr>`}html+='</tbody>'}html+='</table></div>'}html+='</div>';
 const items=state.plan.flatMap(p=>shoppingKeys(state,p).map(k=>state.recipes.find(r=>r.id===p[k])).filter(Boolean));return html+stats(items,'Así se reparte tu menú','Platos del período, incluidos los acompañamientos elegidos y postres. Cada aparición cuenta en su grupo principal.')+`<div class="actions"><button class="primary" data-go="shopping">Ver mi compra →</button><button data-go="settings">Formato del menú</button></div>`}
-function chooseDish(index,key){const p=state.plan[index],list=state.recipes.filter(r=>fitsSlot(r,state,key,p.meal,true,p.date)).sort(alpha);$('#dialog').innerHTML=`<button class="close" data-close aria-label="Cerrar">✕</button><h2>Cambiar ${COURSES[key].toLowerCase()}</h2><p>${p.meal} · ${new Date(p.date+'T12:00:00').toLocaleDateString('es',{weekday:'long',day:'numeric',month:'short'})}</p><form id="choose-form"><label>Receta<select id="dish-choice">${key!=='recipe'?'<option value="">Sin plato</option>':''}${list.map(r=>`<option value="${r.id}" ${p[key]===r.id?'selected':''}>${esc(r.name)}</option>`).join('')}</select></label><p id="choice-warning" class="repeat" hidden>Receta repetida esta semana</p><div class="actions"><button class="primary" type="submit">Guardar cambio</button><button type="button" data-close>Cancelar</button></div></form>`;$('#dialog').showModal();bindDialog();const choice=$('#dish-choice');const warn=()=>{const selected=state.recipes.find(r=>r.id===choice.value),count=key==='dessert'&&selected&&isEverydayDessert(selected)?0:repeatCount(state,p,choice.value)-(p[key]===choice.value?1:0);const r=state.recipes.find(r=>r.id===choice.value),conflict=foodConflict(state,state.plan,p.date,key,r,index);$('#choice-warning').textContent=conflict||(count>0?'Receta repetida esta semana':'');$('#choice-warning').hidden=!(conflict||count>0);$('#choose-form button[type=submit]').disabled=!!conflict};choice.onchange=warn;warn();$('#choose-form').onsubmit=async e=>{e.preventDefault();if(!choice.value&&key==='recipe')return;const value=choice.value;const r=state.recipes.find(r=>r.id===value);if(r&&(!fitsSlot(r,state,key,p.meal,true)||foodConflict(state,state.plan,p.date,key,r,index)))return;await commit(s=>{s.plan[index][key]=value;assignRecipeQuick(s.plan[index],key,s.recipes.find(r=>r.id===value),s.settings);const sauceField=sauceFieldForCourse(key);if(sauceField)s.plan[index][sauceField]='';if(key==='accompaniment')s.plan[index].accompanimentChosen=!!value;s.checked={}},'Plato actualizado');$('#dialog').close()}}
+function chooseDish(index,key){
+  const p=state.plan[index];
+  const list=state.recipes.filter(r=>fitsSlot(r,state,key,p.meal,true,p.date)).sort(alpha);
+  $('#dialog').innerHTML=`<button class="close" data-close aria-label="Cerrar">✕</button><h2>Cambiar ${COURSES[key].toLowerCase()}</h2><p>${p.meal} · ${new Date(p.date+'T12:00:00').toLocaleDateString('es',{weekday:'long',day:'numeric',month:'short'})}</p><form id="choose-form"><label>Receta<select id="dish-choice">${key!=='recipe'?'<option value="">Sin plato</option>':''}${list.map(r=>`<option value="${r.id}" ${p[key]===r.id?'selected':''}>${esc(r.name)}</option>`).join('')}</select></label><p id="choice-warning" class="repeat" hidden></p><div class="actions"><button class="primary" type="submit">Guardar cambio</button><button type="button" data-close>Cancelar</button></div></form>`;
+  $('#dialog').showModal();
+  bindDialog();
+  const choice=$('#dish-choice');
+  const warn=()=>{
+    const selected=state.recipes.find(r=>r.id===choice.value);
+    const count=key==='dessert'&&selected&&isEverydayDessert(selected)?0:repeatCount(state,p,choice.value)-(p[key]===choice.value?1:0);
+    const conflict=selected?foodConflict(state,state.plan,p.date,key,selected,index):'';
+    const message=conflict|| (count>0?'Receta repetida esta semana':'');
+    // En los cambios manuales, una repetición es solo informativa, nunca bloqueante.
+    $('#choice-warning').textContent=message?`Aviso: ${message} Puedes guardar el cambio igualmente.`:'';
+    $('#choice-warning').hidden=!message;
+    // NO deshabilitar "Guardar cambio" por coincidencias de ingredientes o recetas.
+  };
+  choice.onchange=warn;
+  warn();
+  $('#choose-form').onsubmit=async e=>{
+    e.preventDefault();
+    if(!choice.value&&key==='recipe')return;
+    const value=choice.value;
+    const r=state.recipes.find(r=>r.id===value);
+    // Mantener la compatibilidad con el tipo de plato, pero no bloquear las repeticiones.
+    if(r&&!fitsSlot(r,state,key,p.meal,true,p.date))return;
+    await commit(s=>{
+      s.plan[index][key]=value;
+      assignRecipeQuick(s.plan[index],key,s.recipes.find(r=>r.id===value),s.settings);
+      const sauceField=sauceFieldForCourse(key);
+      if(sauceField)s.plan[index][sauceField]='';
+      if(key==='accompaniment')s.plan[index].accompanimentChosen=!!value;
+      s.checked={};
+    },'Plato actualizado');
+    $('#dialog').close();
+  };
+}
 function bindFeatures(){bindSpecialTips();bindSauces();bindPeriod();bindPreferenceFilters();bindBaseEditor();bindListAndMenu();bindReliability();document.querySelectorAll('[data-add-accompaniment]').forEach(b=>b.onclick=()=>commit(s=>{const p=s.plan[+b.dataset.addAccompaniment],id=suggestedSide(s,p.recipe)||pickSlot(s,p,'accompaniment');if(!id)throw Error('No hay acompañamientos compatibles para añadir.');p.accompaniment=id;assignRecipeQuick(p,'accompaniment',s.recipes.find(r=>r.id===id),s.settings);p.accompanimentChosen=true;s.checked={}},'Acompañamiento añadido').catch(()=>{}));document.querySelectorAll('[data-regen]').forEach(b=>b.onclick=()=>commit(s=>regenerate(s,+b.dataset.index,b.dataset.regen),'Receta sustituida por otra similar').catch(()=>{}));document.querySelectorAll('[data-choose]').forEach(b=>b.onclick=()=>chooseDish(+b.dataset.index,b.dataset.choose));document.querySelectorAll('[data-day]').forEach(b=>{b.onclick=()=>{const offset=document.querySelector('.day-strip').scrollLeft;selectedDay=b.dataset.day;render();const strip=document.querySelector('.day-strip');strip.scrollLeft=offset;const active=strip.querySelector('[aria-selected=true]');active.focus({preventScroll:true});active.scrollIntoView({block:'nearest',inline:'nearest'})};b.onkeydown=e=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(e.key))return;e.preventDefault();const buttons=[...document.querySelectorAll('[data-day]')],i=buttons.indexOf(b),next=e.key==='Home'?0:e.key==='End'?buttons.length-1:Math.max(0,Math.min(buttons.length-1,i+(e.key==='ArrowRight'?1:-1)));buttons[next].click()}})}
 document.querySelectorAll('nav [data-tab]').forEach(b=>{b.innerHTML=icon(b.dataset.tab)+`<span>${b.textContent}</span>`});
 
